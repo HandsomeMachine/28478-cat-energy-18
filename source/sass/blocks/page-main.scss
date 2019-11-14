@@ -1,0 +1,57 @@
+.page-main {
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.page-main__title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-transform: none;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-main__subtitle {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.page-main__description {
+  margin-bottom: 22px;
+}
+
+.page-main__description-slogan {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-main__description-image {
+  width: 280px;
+  height: 270px;
+}
+
+.page-main__programs-promo {
+  margin-bottom: 32px;
+}
+
+.page-main__features {
+  margin-bottom: 42px;
+}
+
+.page-main__example {
+  background-color: #f2f2f2;
+}
