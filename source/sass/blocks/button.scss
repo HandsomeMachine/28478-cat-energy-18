@@ -1,0 +1,30 @@
+.button {
+  display: block;
+
+  font: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.button--green {
+  padding-top: 14px;
+  padding-right: 73px;
+  padding-bottom: 11px;
+  padding-left: 73px;
+
+  color: #ffffff;
+
+  background-color: #68b738;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

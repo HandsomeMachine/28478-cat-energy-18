@@ -1,0 +1,25 @@
+.features__list {
+  @include list-base-style-reset;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: none;
+}
+
+.features__item {
+  margin-bottom: 32px;
+  padding-left: 80px;
+}
+
+.features__item:last-child {
+  margin-bottom: 0;
+}
+
+.features__description {
+  margin: 0;
+}
