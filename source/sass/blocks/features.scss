@@ -4,10 +4,8 @@
   display: flex;
   flex-direction: column;
 
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
+  font-family: $second-font;
+  color: $second-font-color;
   text-transform: none;
 }
 

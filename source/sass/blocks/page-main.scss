@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 
+  background-color: $green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
@@ -12,7 +13,6 @@
 
   font-size: 36px;
   line-height: 36px;
-  font-weight: 400;
   text-transform: none;
   text-align: center;
   color: #ffffff;
@@ -24,7 +24,6 @@
 
   font-size: 36px;
   line-height: 60px;
-  font-weight: 400;
   text-transform: none;
 }
 
@@ -33,7 +32,6 @@
 }
 
 .page-main__description-slogan {
-  font-size: 14px;
   line-height: 14px;
   text-align: center;
   color: #ffffff;
@@ -53,5 +51,5 @@
 }
 
 .page-main__example {
-  background-color: #f2f2f2;
+  background-color: $bg-color-gray;
 }

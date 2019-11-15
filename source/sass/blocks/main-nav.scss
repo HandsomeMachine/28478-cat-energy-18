@@ -19,12 +19,11 @@
 
   text-align: center;
 
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $line-gray;
 }
 
 .main-nav__link {
   font-weight: 500;
-  color: #111111;
 
   &[href]:hover {
     color: rgba(17, 17, 17, 0.6);

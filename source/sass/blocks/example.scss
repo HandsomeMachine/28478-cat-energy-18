@@ -14,9 +14,9 @@
   margin-bottom: 27px;
   padding-right: 14px;
 
-  font-family: "Arial", sans-serif;
+  font-family: $second-font;
   text-transform: none;
-  color: #444444;
+  color: $second-font-color;
 }
 
 .example__table {
@@ -25,11 +25,11 @@
 }
 
 .example__text {
-  font-family: "Arial", sans-serif;
+  font-family: $second-font;
   font-size: 12px;
   line-height: 12px;
   text-transform: none;
-  color: #444444;
+  color: $second-font-color;
 }
 
 .example__data {
@@ -87,5 +87,5 @@
   height: 14px;
   margin: 0 18px;
 
-  background-color: green;
+  background-color: $green;
 }

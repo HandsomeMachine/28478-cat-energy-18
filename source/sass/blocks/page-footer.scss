@@ -17,17 +17,15 @@
 .page-footer__contacts-small {
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
 }
 
 .page-footer__contacts-address {
   width: 135px;
   margin: 0;
 
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
+  font-family: $second-font;
   line-height: 20px;
-  color: #444444;
+  color: $second-font-color;
   text-transform: none;
 }
 
@@ -40,7 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: $bg-color-gray;
 }
 
 .page-footer__logo {
@@ -60,24 +58,28 @@
   @include list-base-style-reset;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 280px;
   margin-bottom: 22px;
   padding-top: 24px;
   padding-bottom: 21px;
 
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid $line-gray-darken;
+  border-bottom: 1px solid $line-gray-darken;
+}
+
+.page-footer__social-item {
+  margin-right: 35px;
 }
 
 .page-footer__social-link {
   &:hover {
-    fill: #68b738;
+    fill: $green;
   }
 
   &:active {
-    fill: #68b738;
+    fill: $green;
     opacity: 0.3;
   }
 }
@@ -90,11 +92,11 @@
   margin-bottom: 22px;
 
   &:hover {
-    fill: #68b738;
+    fill: $green;
   }
 
   &:active {
-    fill: #68b738;
+    fill: $green;
     opacity: 0.3;
     color: rgba(68, 68, 68, 0.3);
   }
@@ -104,10 +106,10 @@
   width: 115px;
   margin: 0;
 
-  font-family: "Arial", sans-serif;
+  font-family: $second-font;
   font-size: 16px;
   line-height: 16px;
-  color: #444444;
+  color: $second-font-color;
   text-transform: none;
 }
 
