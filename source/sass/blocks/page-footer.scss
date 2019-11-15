@@ -17,6 +17,7 @@
 .page-footer__contacts-small {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
 }
 
 .page-footer__contacts-address {
@@ -71,6 +72,10 @@
 
 .page-footer__social-item {
   margin-right: 35px;
+}
+
+.page-footer__social-item:last-child {
+  margin-right: 0;
 }
 
 .page-footer__social-link {

@@ -12,7 +12,7 @@
 .example__description {
   margin: 0;
   margin-bottom: 27px;
-  padding-right: 14px;
+  padding-right: 5px;
 
   font-family: $second-font;
   text-transform: none;
@@ -22,6 +22,8 @@
 .example__table {
   width: 280px;
   margin-bottom: 25px;
+
+  border-collapse: collapse;
 }
 
 .example__text {
@@ -30,11 +32,13 @@
   line-height: 12px;
   text-transform: none;
   color: $second-font-color;
+  text-align: center;
 }
 
 .example__data {
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
 }
 
 .example__budget-spend {
@@ -83,9 +87,20 @@
 }
 
 .example-slider-toggle {
-  width: 84px;
+  width: 80px;
   height: 14px;
   margin: 0 18px;
+  padding: 2px 5px;
+
+  background-color: #ffffff;
+  border: 2px solid #cdcdcd;
+  border-radius: 5px;
+}
+
+.example-slider-bar {
+  width: 35px;
+  height: 6px;
 
   background-color: $green;
+  border-radius: 5px;
 }

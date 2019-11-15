@@ -1,5 +1,4 @@
 .logo {
-  width: 191px;
   height: 39px;
 
   &[href]:hover {
@@ -9,4 +8,12 @@
   &[href]:active {
     opacity: 0.6;
   }
+}
+
+.logo--header {
+  width: 191px;
+}
+
+.logo--footer {
+  width: 128px;
 }
