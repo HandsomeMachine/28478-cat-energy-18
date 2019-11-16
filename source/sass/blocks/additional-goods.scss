@@ -1,3 +1,68 @@
 .additional-goods {
-  color: #111111;
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-goods__title {
+  margin: 30px 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.additional-goods__list {
+  @include list-base-style-reset;
+}
+
+.additional-goods__item {
+  padding: 15px 0;
+
+  border-top: 1px solid $line-gray;
+}
+
+.additional-goods__item:last-child {
+  border-bottom: 1px solid $line-gray;
+}
+
+.additional-goods__subtitle {
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.additional-goods__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  font-family: $second-font;
+  color: #222222;
+  text-transform: none;
+}
+
+.additional-goods__gift {
+  margin-top: 40px;
+  margin-bottom: 35px;
+
+  background-color: $green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.additional-goods__gift-description {
+  padding-top: 170px;
+  padding-right: 59px;
+  padding-bottom: 27px;
+  padding-left: 59px;
+
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: none;
 }

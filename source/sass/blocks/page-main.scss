@@ -1,7 +1,9 @@
 .page-main {
   display: flex;
   flex-direction: column;
+}
 
+.page-main--index-bg {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
 }
@@ -10,15 +12,34 @@
   margin-top: 30px;
   margin-bottom: 20px;
 
-  font-size: 36px;
-  line-height: 36px;
   font-weight: 400;
   text-transform: none;
   text-align: center;
+}
+
+.page-main__title--size-l {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.page-main__title--size-m {
+  font-size: 36px;
+  line-height: 60px;
+}
+
+.page-main__title--white {
   color: #ffffff;
 }
 
-.page-main__subtitle {
+.page-main__title--black {
+  color: $default-font-color;
+}
+
+.page-main__description-slogan {
+  margin-bottom: 30px;
+}
+
+.features__title {
   margin: 0;
   margin-bottom: 32px;
 
@@ -33,7 +54,6 @@
 }
 
 .page-main__description-slogan {
-  font-size: 14px;
   line-height: 14px;
   text-align: center;
   color: #ffffff;
@@ -53,5 +73,5 @@
 }
 
 .page-main__example {
-  background-color: #f2f2f2;
+  background-color: $bg-color-gray;
 }
