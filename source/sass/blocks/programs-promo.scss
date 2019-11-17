@@ -20,13 +20,63 @@
 }
 
 .programs-promo__title {
+  position: relative;
+
   margin: 0;
   margin-bottom: 26px;
-  margin-left: 71px;
+  padding-left: 71px;
 
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+}
+
+.programs-promo__icon {
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $green;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+  }
+}
+
+.programs-promo__icon--weight-loss {
+  &::after {
+    top: -7px;
+    left: 8px;
+
+    width: 35px;
+    height: 49px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.programs-promo__icon--weight-gain {
+  &::after {
+    top: 6px;
+    left: -8px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .programs-promo__description {
@@ -43,6 +93,8 @@
 }
 
 .programs-promo__link {
+  position: relative;
+
   padding-right: 37px;
 
   font-size: 16px;
@@ -51,5 +103,36 @@
 
   &:active {
     color: rgba(17, 17, 17, 0.3);
+  }
+}
+
+.programs-promo__link--arrow {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+
+    width: 24px;
+    height: 11px;
+    margin-left: 5px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 33px;
+
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &:active {
+    color: rgba(17, 17, 17, 0.3);
+    opacity: 0.3;
   }
 }

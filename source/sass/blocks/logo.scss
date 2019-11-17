@@ -1,7 +1,8 @@
 .logo {
   height: 39px;
 
-  &[href]:hover {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.8;
   }
 
@@ -10,10 +11,10 @@
   }
 }
 
-.logo--header {
+.logo__image--header {
   width: 191px;
 }
 
-.logo--footer {
+.logo__image--footer {
   width: 128px;
 }

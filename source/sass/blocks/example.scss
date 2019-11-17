@@ -1,12 +1,25 @@
 .example {
   display: flex;
   flex-direction: column;
+
   margin-bottom: 31px;
+
+  background-color: $bg-color-gray;
 }
 
 .example__wrapper {
   width: 320px;
   padding: 0 20px;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  text-transform: none;
 }
 
 .example__description {
@@ -61,6 +74,7 @@
 .example-slider__actions {
   display: flex;
   align-items: center;
+
   margin-left: 64px;
   margin-bottom: 38px;
 }
@@ -77,7 +91,8 @@
   border: none;
   border-bottom: 1px dotted #bebebe;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom: 1px solid #989898;
   }
 

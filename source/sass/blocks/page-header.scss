@@ -1,12 +1,14 @@
 .page-header {
   display: flex;
   flex-direction: column;
+
   width: 320px;
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
+
   padding-bottom: 10px;
   padding-left: 20px;
 

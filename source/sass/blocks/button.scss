@@ -1,5 +1,6 @@
 .button {
   display: block;
+
   width: 280px;
   padding-top: 13px;
   padding-bottom: 12px;
@@ -26,7 +27,8 @@
   color: $second-font-color;
   background-color: $bg-color-gray;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #ebebeb;
   }
 
