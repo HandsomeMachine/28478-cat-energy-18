@@ -10,21 +10,26 @@
 
 .page-main__title {
   margin-top: 30px;
-  margin-bottom: 20px;
+  padding: 0;
 
   font-weight: 400;
   text-transform: none;
   text-align: center;
 }
 
-.page-main__title--size-l {
+.page-main__title--size-m {
+  margin-bottom: 20px;
+
   font-size: 36px;
   line-height: 36px;
 }
 
-.page-main__title--size-m {
+.page-main__title--size-l {
+  margin-bottom: 35px;
+
   font-size: 36px;
   line-height: 60px;
+  text-align: left;
 }
 
 .page-main__title--white {
@@ -35,25 +40,13 @@
   color: $default-font-color;
 }
 
+.page-main__description {
+  margin-bottom: 40px;
+}
+
 .page-main__description-slogan {
   margin-bottom: 30px;
-}
 
-.features__title {
-  margin: 0;
-  margin-bottom: 32px;
-
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  text-transform: none;
-}
-
-.page-main__description {
-  margin-bottom: 22px;
-}
-
-.page-main__description-slogan {
   line-height: 14px;
   text-align: center;
   color: #ffffff;
@@ -70,8 +63,4 @@
 
 .page-main__features {
   margin-bottom: 42px;
-}
-
-.page-main__example {
-  background-color: $bg-color-gray;
 }

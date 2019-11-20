@@ -12,7 +12,7 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo logo">
-        <img class="logo__image logo--header" src="img/logo-mobile.svg" width="191" height="39"
+        <img class="logo__image logo__image--header" src="img/logo-mobile.svg" width="191" height="39"
           alt="Логотип интернет-магазина фитнес еды для котиков «Cat energy».">
       </a>
 
@@ -38,55 +38,57 @@
     </nav>
   </header>
 
-  <main class="page-main">
-    <h1 class="page-main__title">Подбор программы</h1>
+  <main class="page-main container">
+    <h1 class="page-main__title page-main__title--size-l">Подбор программы</h1>
     <p class="page-main__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
     <section class="program">
-      <h2 class="visually-hidden">Подберите программу питания для вашего кота</h2>>
+      <h2 class="visually-hidden">Подберите программу питания для вашего кота</h2>
 
       <form class="program__form" method="get" action="https://echo.htmlacademy.ru">
-
         <fieldset class="program__group program__base-info">
           <legend class="visually-hidden">Персональные характеристики кота</legend>
 
           <ul class="program__list">
-            <li class="program__item">
-              <label for="name-field">Имя:*</label>
-              <input type="text" id="name-field" name="name" placeholder="Барсик" required>
+            <li class="program__item program__item--mgb-15">
+              <label class="program__label" for="name-field">Имя:*</label>
+              <input class="program__input-text" type="text" id="name-field" name="name" placeholder="Барсик" required>
             </li>
 
-            <li class="program__item">
-              <label for="weight-field">Вес (кг):*</label>
-              <input type="text" id="weight-field" name="weight" placeholder="7" required>
+            <li class="program__item program__item--mgb-15">
+              <label class="program__label" for="weight-field">Вес (кг):*</label>
+              <input class="program__input-text" type="text" id="weight-field" name="weight" placeholder="7" required>
             </li>
 
-            <li class="program__item">
-              <label for="age-field">Возраст (лет):</label>
-              <input type="text" id="age-field" name="age" placeholder="7">
+            <li class="program__item program__item--mgb-15">
+              <label class="program__label" for="age-field">Возраст (лет):</label>
+              <input class="program__input-text" type="text" id="age-field" name="age" size="15" placeholder="7">
             </li>
           </ul>
         </fieldset>
 
         <fieldset class="program__group program__goal">
-          <legend class="program__title">
-            <span class="visually-hidden">Определение цели программы питания</span>
-          </legend>
+          <legend class="program__title visually-hidden">Определение цели программы питания</legend>
 
           <ul class="program__list">
-            <li class="program__item">
-              <label for="weight-loss-field">Похудение</label>
-              <input class="visually-hidden" type="radio" id="weight-loss-field" name="goal" value="weight-loss">
+            <li class="program__item program__item--mgb-25">
+              <input class="visually-hidden" type="radio" id="weight-loss-field" name="goal" value="weight-loss"
+                checked>
+              <label class="program__label program__label--radio program__label--focus"
+                for="weight-loss-field">Похудение</label>
             </li>
 
-            <li class="program__item">
-              <label for="weight-gain-field">Набор массы</label>
+            <li class="program__item program__item--mgb-25">
               <input class="visually-hidden" type="radio" id="weight-gain-field" name="goal" value="weight-gain">
+              <label class="program__label program__label--radio program__label--focus" for="weight-gain-field">Набор
+                массы</label>
             </li>
 
-            <li class="program__item">
-              <label for="consultation-field">Не знаю (нужен ваш совет)</label>
+            <li class="program__item program__item--mgb-25">
               <input class="visually-hidden" type="radio" id="consultation-field" name="goal" value="consultation">
+              <label class="program__label program__label--radio program__label--focus" for="consultation-field">Не знаю
+                (нужен ваш
+                совет)</label>
             </li>
           </ul>
         </fieldset>
@@ -95,15 +97,17 @@
           <legend class="program__title">Контактные данные (владельца кота)</legend>
 
           <ul class="program__list">
-            <li class="program__item program__item--mail">
-              <label for="email-field">E-mail:*</label>
-              <input type="email" id="email-field" name="email" placeholder="kuklachev@gmail.com" required>
+            <li class="program__item program__item--mail program__item--mgb-25">
+              <label class="program__label" for="email-field">E-mail:*</label>
+              <input class="program__input-text program__input-icon program__input-icon--mail" type="email"
+                id="email-field" name="email" placeholder="kuklachev@gmail.com" size="15" required>
             </li>
 
-            <li class="program__item program__item--phone">
-              <label for="tel-field">Телефон:*</label>
-              <input type="tel" id="tel-field" name="tel" placeholder="8 (960) 900-60-90"
-                pattern="[0-9]{1} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+            <li class="program__item program__item--phone program__item--mgb-25">
+              <label class="program__label" for="tel-field">Телефон:*</label>
+              <input class="program__input-text program__input-icon program__input-icon--phone" type="tel"
+                id="tel-field" name="tel" placeholder="8 (960) 900-60-90"
+                pattern="[0-9]{1} [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{2}" size="15" required>
             </li>
           </ul>
         </fieldset>
@@ -111,40 +115,44 @@
         <fieldset class="program__group program__comment">
           <legend class="program__title">Комментарий</legend>
           <label class="visually-hidden" for="comment-field">
-            <span>Оставьте ваш комментарий</span>
+            Оставьте ваш комментарий
           </label>
-          <textarea id="comment-field" name="comment" cols="30" rows="10"
+          <textarea class="program__comment-textarea" id="comment-field" name="comment" cols="30" rows="10"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="program__group program__contacts">
+        <fieldset class="program__group program__add-goods">
           <legend class="program__title">Дополнительно</legend>
 
           <ul class="program__list">
-            <li class="program__item">
-              <label for="sugar-field">Сахарозаменитель</label>
+            <li class="program__item program__item--mgb-25">
               <input class="visually-hidden" type="checkbox" id="sugar-field" name="additional-good" value="sugar"
                 checked>
+              <label class="program__label program__label--checkbox program__label--focus"
+                for="sugar-field">Сахарозаменитель</label>
             </li>
 
-            <li class="program__item">
-              <label for="water-field">Питьевая вода</label>
+            <li class="program__item program__item--mgb-25">
               <input class="visually-hidden" type="checkbox" id="water-field" name="additional-good" value="water">
+              <label class="program__label program__label--checkbox program__label--focus" for="water-field">Питьевая
+                вода</label>
             </li>
 
-            <li class="program__item">
-              <label for="milk-field">Молоко</label>
+            <li class="program__item program__item--mgb-25">
               <input class="visually-hidden" type="checkbox" id="milk-field" name="additional-good" value="milk">
+              <label class="program__label program__label--checkbox program__label--focus"
+                for="milk-field">Молоко</label>
             </li>
 
-            <li class="program__item">
-              <label for="vitamins-field">Витамины</label>
+            <li class="program__item program__item--mgb-25">
               <input class="visually-hidden" type="checkbox" id="vitamins-field" name="additional-good"
                 value="vitamins">
+              <label class="program__label program__label--checkbox program__label--focus"
+                for="vitamins-field">Витамины</label>
             </li>
           </ul>
         </fieldset>
-        <button class="button program__button" type="submit">Отправить заявку</button>
+        <button class="button button--green" type="submit">Отправить заявку</button>
         <small class="program__important-field">
           <sup>*</sup> — Обязательные поля
         </small>
@@ -153,7 +161,6 @@
   </main>
 
   <footer class="page-footer">
-
     <section class="page-footer__contacts">
       <div class="container">
         <h2 class="visually-hidden">Контактная информация</h2>
@@ -179,7 +186,7 @@
 
     <div class="container page-footer__wrapper">
       <a class="page-footer__logo logo" href="index.html">
-        <img class="logo__image logo--footer" src="img/logo-footer.svg" width="128" height="24"
+        <img class="logo__image logo__image--footer" src="img/logo-footer.svg" width="128" height="24"
           alt="Укороченный логотип интернет-магазина фитнес еды для котиков «Cat energy».">
       </a>
 
