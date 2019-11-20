@@ -1,3 +1,7 @@
+.features {
+  padding: 35px 0;
+}
+
 .features__title {
   margin: 0;
   margin-bottom: 32px;
@@ -20,22 +24,24 @@
 }
 
 .features__item {
-  position: relative;
-
   margin-bottom: 32px;
-  padding-left: 80px;
 }
 
 .features__item:last-child {
   margin-bottom: 0;
 }
 
-.features__item--icon {
+.features__description {
+  position: relative;
+
+  margin: 0;
+  padding-left: 80px;
+
   &::before {
     content: "";
 
     position: absolute;
-    top: -3px;
+    top: 0;
     left: 0;
 
     width: 60px;
@@ -56,34 +62,89 @@
   }
 }
 
-.features__item--icon-eco {
+.features__description--eco {
   &::after {
     background-image: url("../img/advantage-leaf@1x.png");
     background-repeat: no-repeat;
   }
 }
 
-.features__item--icon-powder {
+.features__description--powder {
   &::after {
     background-image: url("../img/advantage-powder@1x.png");
     background-repeat: no-repeat;
   }
 }
 
-.features__item--icon-food {
+.features__description--food {
   &::after {
     background-image: url("../img/advantage-dining@1x.png");
     background-repeat: no-repeat;
   }
 }
 
-.features__item--icon-period {
+.features__description--period {
   &::after {
     background-image: url("../img/advantage-clock@1x.png");
     background-repeat: no-repeat;
   }
 }
 
-.features__description {
-  margin: 0;
+@media (min-width: $tablet-width) {
+  .features__title {
+    font-size: 60px;
+  }
+
+  .features__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    position: relative;
+
+    width: 245px;
+    margin-bottom: 140px;
+
+    background-color: none;
+
+    counter-increment: section;
+
+    &::after {
+      content: counter(section);
+
+      position: absolute;
+
+      top: 85px;
+      right: 6px;
+      z-index: -1;
+
+      font-family: $default-font;
+      font-size: 261px;
+      color: $bg-color-gray;
+    }
+  }
+
+  .features__item:nth-child(2n+1) {
+    margin-right: 185px;
+  }
+
+  .features__description {
+    padding-top: 100px;
+    padding-left: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      top: 15px;
+      left: 15px;
+    }
+  }
 }

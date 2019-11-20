@@ -1,16 +1,13 @@
 .programs-promo__list {
   @include list-base-style-reset;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .programs-promo__item {
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 20px;
-  padding-top: 29px;
-  padding-right: 20px;
-  padding-bottom: 22px;
-  padding-left: 20px;
+  padding: 25px 20px;
 
   background-color: $bg-color-gray;
 }
@@ -29,9 +26,7 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-}
 
-.programs-promo__icon {
   &::before {
     content: "";
 
@@ -53,7 +48,7 @@
   }
 }
 
-.programs-promo__icon--weight-loss {
+.programs-promo__title--weight-loss {
   &::after {
     top: -7px;
     left: 8px;
@@ -66,7 +61,7 @@
   }
 }
 
-.programs-promo__icon--weight-gain {
+.programs-promo__title--weight-gain {
   &::after {
     top: 6px;
     left: -8px;
@@ -81,7 +76,7 @@
 
 .programs-promo__description {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   padding-right: 15px;
   padding-bottom: 25px;
 
@@ -95,7 +90,7 @@
 .programs-promo__link {
   position: relative;
 
-  padding-right: 37px;
+  padding-right: 35px;
 
   font-size: 16px;
   line-height: 16px;
@@ -111,7 +106,7 @@
     content: "";
 
     position: absolute;
-    top: 8px;
+    top: 4px;
 
     width: 24px;
     height: 11px;
@@ -134,5 +129,66 @@
   &:active {
     color: rgba(17, 17, 17, 0.3);
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs-promo__item {
+    padding-top: 60px;
+    padding-right: 270px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+  }
+
+  .programs-promo__title {
+    padding-left: 0;
+
+    font-size: 36px;
+
+    &::before {
+      top: 20px;
+      left: 400px;
+
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs-promo__title--weight-loss {
+    &::after {
+      top: 4px;
+      left: 430px;
+
+      width: 140px;
+      height: 194px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__title--weight-gain {
+    &::after {
+      top: 78px;
+      left: 370px;
+
+      width: 268px;
+      height: 112px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__description {
+    border: none;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs-promo__link {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
