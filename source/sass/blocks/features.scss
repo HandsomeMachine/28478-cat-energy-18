@@ -48,43 +48,33 @@
     height: 60px;
 
     background-color: $green;
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 3px;
-    left: 5px;
-
-    width: 60px;
-    height: 60px;
+    background-position: 5px 5px;
   }
 }
 
 .features__description--eco {
-  &::after {
+  &::before {
     background-image: url("../img/advantage-leaf@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 .features__description--powder {
-  &::after {
+  &::before {
     background-image: url("../img/advantage-powder@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 .features__description--food {
-  &::after {
+  &::before {
     background-image: url("../img/advantage-dining@1x.png");
     background-repeat: no-repeat;
   }
 }
 
 .features__description--period {
-  &::after {
+  &::before {
     background-image: url("../img/advantage-clock@1x.png");
     background-repeat: no-repeat;
   }
@@ -140,11 +130,8 @@
     &::before {
       width: 80px;
       height: 80px;
-    }
 
-    &::after {
-      top: 15px;
-      left: 15px;
+      background-position: 15px 15px;
     }
   }
 }

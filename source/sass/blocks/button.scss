@@ -13,7 +13,7 @@
 }
 
 .button--green {
-  color: #ffffff;
+  color: $font-color-white;
 
   background-color: $green;
 
@@ -41,3 +41,15 @@
     color: rgba(68, 68, 68, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .button {
+    width: 245px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
