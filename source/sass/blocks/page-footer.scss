@@ -38,6 +38,10 @@
   min-height: 400px;
 }
 
+// // ======================================================================
+//    #Tablet styles
+// // ======================================================================
+
 @media (min-width: $tablet-width) {
   .page-footer__contacts-info {
     padding: 65px 0;
@@ -170,5 +174,26 @@
 
   .page-footer__copyright {
     width: 165px;
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    position: relative;
+  }
+
+  .page-footer__contacts-info {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 100px;
+
+    width: 570px;
+
+    background-color: $bg-color-white;
   }
 }

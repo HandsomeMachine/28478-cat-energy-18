@@ -87,7 +87,6 @@
 .example-slider__list {
   @include list-base-style-reset;
 
-  min-height: 225px;
   margin-bottom: 35px;
 }
 
@@ -103,8 +102,7 @@
 }
 
 .example-slider-button {
-  padding: 0;
-  padding-bottom: 6px;
+  padding: 6px 0;
 
   font-size: 16px;
   line-height: 20px;
@@ -146,6 +144,10 @@
 
   cursor: pointer;
 }
+
+// // ======================================================================
+//    #Talbet styles
+// // ======================================================================
 
 @media (min-width: $tablet-width) {
   .example {
@@ -193,6 +195,7 @@
     margin-top: -15px;
     padding: 5px 8px;
 
+    font-size: 14px;
     line-height: 14px;
 
     background-color: $bg-color-white;
@@ -203,7 +206,7 @@
   }
 
   .example__time-spend .example__text {
-    width: 161px;
+    width: 143px;
   }
 
   .example__budget-spend {
@@ -253,5 +256,65 @@
       background-color: $green;
       border-radius: 50%;
     }
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .example {
+    border-top: none;
+
+    background: linear-gradient(to bottom, $bg-color-white 30%, $bg-color-gray 30%);
+  }
+
+  .example__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .example__description-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 570px;
+    margin-right: 40px;
+    padding-top: 75px;
+    padding-right: 105px;
+    padding-bottom: 75px;
+  }
+
+  .example__description {
+    margin-bottom: 60px;
+  }
+
+  .example__wrapper {
+    flex-direction: column;
+  }
+
+  .example__table {
+    margin-right: auto;
+  }
+
+  .example__text {
+    background-color: $bg-color-gray;
+  }
+
+  .example__budget-spend {
+    display: flex;
+    width: 375px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .example__budget-spend-text {
+    margin-right: 75px;
+  }
+
+  .example-slider {
+    width: 610px;
   }
 }

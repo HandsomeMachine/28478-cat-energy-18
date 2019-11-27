@@ -132,6 +132,10 @@
   }
 }
 
+// // ======================================================================
+//    #Tablet styles
+// // ======================================================================
+
 @media (min-width: $tablet-width) {
   .programs-promo__item {
     padding-top: 60px;
@@ -190,5 +194,74 @@
   .programs-promo__link {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .programs-promo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .programs-promo__item {
+    width: 570px;
+    margin-right: 80px;
+    margin-bottom: 0;
+    padding-right: 55px;
+    padding-left: 50px;
+  }
+
+  .programs-promo__item:last-child {
+    margin-right: 0;
+  }
+
+  .programs-promo__title {
+    margin-bottom: 75px;
+    padding-left: 165px;
+
+    font-size: 36px;
+
+    &::before {
+      top: -30px;
+      left: -5px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programs-promo__title--weight-loss {
+    &::after {
+      top: -38px;
+      left: 4px;
+
+      width: 71px;
+      height: 97px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__title--weight-gain {
+    &::after {
+      top: -7px;
+      left: -21px;
+
+      width: 134px;
+      height: 57px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__description {
+    margin-bottom: 35px;
+    padding-bottom: 0;
   }
 }

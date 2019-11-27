@@ -80,6 +80,10 @@
   }
 }
 
+// // ======================================================================
+//    #Talbet styles
+// // ======================================================================
+
 @media (min-width: $tablet-width) {
   .features__title {
     font-size: 60px;
@@ -133,5 +137,29 @@
 
       background-position: 15px 15px;
     }
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .features__item:nth-child(2n+1) {
+    margin-right: 80px;
+  }
+
+  .features__item:last-child {
+    margin-right: 0;
+  }
+
+  .features__description {
+    padding-top: 120px;
   }
 }

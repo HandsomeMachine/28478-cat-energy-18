@@ -12,45 +12,49 @@
 <body>
 
   <header class="page-header">
-    <div class="page-header__wrapper container">
-      <a class="page-header__logo logo">
-        <img class="logo__image logo__image--header" src="img/logo-mobile.svg" width="191" height="39"
-          alt="Логотип интернет-магазина фитнес еды для котиков «Cat energy».">
-      </a>
+    <div class="page-header__top-wrapper">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo">
+          <img class="logo__image logo__image--header" src="img/logo-tablet.svg" width="174" height="59"
+            alt="Логотип интернет-магазина фитнес еды для котиков «Cat energy».">
+        </a>
 
-      <button class="page-header__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+
+      <nav class="page-header__main-nav main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--current">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
-    <nav class="page-header__main-nav main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+    <div class="container">
+      <div class="page-header__intro">
+        <h1 class="page-header__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
+
+        <section class="page-header__description">
+          <h2 class="visually-hidden">Подберите программу питания для вашего кота</h2>
+          <p class="page-header__description-slogan">Занялся собой? Займись котом!</p>
+          <!-- <img class="page-header__description-image" src="img/index-can-tablet@1x.jpg" width="708" height="609"
+            alt="Баночка с питанием Cat energy pro со вкусом курицы."> -->
+          <!-- <img class="page-header__description-image" src="img/index-can-mobile@1x.png" width="280" height="270"
+            alt="Баночка с питанием Cat energy pro со вкусом курицы."> -->
+          <a class="page-header__button button button--green" href="form.html">Подобрать программу</a>
+        </section>
       </div>
-    </nav>
-
-    <div class="page-header__intro container">
-      <h1 class="page-header__title">Функциональное питание&nbsp;для&nbsp;котов</h1>
-
-      <section class="page-header__description">
-        <h2 class="visually-hidden">Подберите программу питания для вашего кота</h2>
-        <p class="page-header__description-slogan">Занялся собой? Займись котом!</p>
-        <!-- <img class="page-header__description-image" src="img/index-can-tablet@1x.jpg" width="708" height="609"
-          alt="Баночка с питанием Cat energy pro со вкусом курицы."> -->
-        <img class="page-header__description-image" src="img/index-can-mobile@1x.png" width="280" height="270"
-          alt="Баночка с питанием Cat energy pro со вкусом курицы.">
-        <a class="page-header__button button button--green" href="form.html">Подобрать программу</a>
-      </section>
     </div>
   </header>
 
@@ -107,46 +111,52 @@
     <section class="page-main__example example">
       <div class="container">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
-          по
-          16 часов в день.
-        </p>
 
-        <div class="example__wrapper">
-          <div class="example__table">
-            <div class="example__weight-loss">
-              <span class="example__data">5 кг</span>
-              <span class="example__text">снижение веса</span>
-            </div>
-            <div class="example__time-spend">
-              <span class="example__data">60 дней</span>
-              <span class="example__text">затрачено времени</span>
+        <div class="example__container">
+          <div class="example__description-wrapper">
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+              Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+              по
+              16 часов в день.
+            </p>
+
+            <div class="example__wrapper">
+              <div class="example__table">
+                <div class="example__weight-loss">
+                  <span class="example__data">5 кг</span>
+                  <span class="example__text">снижение веса</span>
+                </div>
+                <div class="example__time-spend">
+                  <span class="example__data">60 дней</span>
+                  <span class="example__text">затрачено времени</span>
+                </div>
+              </div>
+
+              <p class="example__budget-spend">
+                <span class="example__budget-spend-text">Затраты на питание:</span>
+                <span class="example__budget-spend-data">15 000 руб.</span>
+              </p>
             </div>
           </div>
 
-          <p class="example__budget-spend">
-            Затраты на питание: 15 000 руб.
-          </p>
-        </div>
-
-        <div class="example-slider">
-          <ul class="example-slider__list">
-            <li class="example-slider__item">
-              <img class="example-slider__image example-slider__image--before" src="img/before-tablet@1x.png"
-                width="311" height="232" alt="Кот с лишним весом до приёма питания по программе Cat Energy Slim.">
-            </li>
-            <li class="example-slider__item visually-hidden">
-              <img class="example-slider__image example-slider__image--after" src="img/after-mobile@1x.png" width="311"
-                height="232" alt="Похудевший кота после питания по программе Cat Energy Slim.">
-            </li>
-          </ul>
-          <div class="example-slider__actions">
-            <button class="example-slider-button" type="button">Было</button>
-            <div class="example-slider-bar">
-              <div class="example-slider-toggle" tabindex="0"></div>
+          <div class="example-slider">
+            <ul class="example-slider__list">
+              <li class="example-slider__item">
+                <img class="example-slider__image example-slider__image--before" src="img/before-tablet@1x.png"
+                  width="311" height="232" alt="Кот с лишним весом до приёма питания по программе Cat Energy Slim.">
+              </li>
+              <li class="example-slider__item visually-hidden">
+                <img class="example-slider__image example-slider__image--after" src="img/after-mobile@1x.png" width="311"
+                  height="232" alt="Похудевший кота после питания по программе Cat Energy Slim.">
+              </li>
+            </ul>
+            <div class="example-slider__actions">
+              <button class="example-slider-button" type="button">Было</button>
+              <div class="example-slider-bar">
+                <div class="example-slider-toggle" tabindex="0"></div>
+              </div>
+              <button class="example-slider-button" type="button">Стало</button>
             </div>
-            <button class="example-slider-button" type="button">Стало</button>
           </div>
         </div>
       </div>
@@ -232,8 +242,7 @@
             <p class="page-footer__copyright-text">HTML Academy</p>
             <svg class="page-footer__copyright-image" xmlns="http://www.w3.org/2000/svg" width="27" height="34"
               viewBox="0 0 26.943 34.09" role="img" aria-label="Логотип партнера HTML Academy">
-              <path
-                d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" />
+              <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" />
             </svg>
           </a>
         </section>
