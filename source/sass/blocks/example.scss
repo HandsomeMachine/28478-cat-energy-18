@@ -9,11 +9,6 @@
 .example__title {
   margin: 0;
   margin-bottom: 35px;
-
-  font-size: 36px;
-  line-height: 60px;
-  font-weight: 400;
-  text-transform: none;
 }
 
 .example__description {
@@ -51,7 +46,7 @@
   line-height: 24px;
   text-align: center;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid $line-gray-darken2;
   border-radius: 5px;
 }
 
@@ -65,9 +60,9 @@
   font-family: $second-font;
   font-size: 12px;
   line-height: 12px;
-  text-transform: none;
   color: $second-font-color;
   text-align: center;
+  text-transform: none;
 
   background-color: $bg-color-gray;
 }
@@ -101,7 +96,7 @@
   align-items: center;
 }
 
-.example-slider-button {
+.example-slider__button {
   padding: 6px 0;
 
   font-size: 16px;
@@ -124,18 +119,18 @@
   }
 }
 
-.example-slider-bar {
+.example-slider__bar {
   width: 80px;
   height: 14px;
   margin: 0 18px;
   padding: 2px 5px;
 
   background-color: $bg-color-white;
-  border: 2px solid #cdcdcd;
+  border: 2px solid $line-gray-darken2;
   border-radius: 5px;
 }
 
-.example-slider-toggle {
+.example-slider__toggle {
   width: 35px;
   height: 6px;
 
@@ -158,8 +153,6 @@
 
   .example__title {
     margin-bottom: 60px;
-
-    font-size: 60px;
   }
 
   .example__description {
@@ -221,18 +214,18 @@
     margin: 0 auto;
   }
 
-  .example-slider-button {
+  .example-slider__button {
     font-size: 20px;
   }
 
-  .example-slider-bar {
+  .example-slider__bar {
     position: relative;
 
     width: 428px;
     height: 6px;
   }
 
-  .example-slider-toggle {
+  .example-slider__toggle {
     position: absolute;
     top: -15px;
     left: 6px;

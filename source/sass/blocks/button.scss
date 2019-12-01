@@ -1,10 +1,6 @@
 .button {
   display: block;
 
-  width: 280px;
-  padding-top: 13px;
-  padding-bottom: 12px;
-
   text-align: center;
 
   border: none;
@@ -46,13 +42,20 @@
 //    #Talbet styles
 // // ======================================================================
 
-@media (min-width: $tablet-width) {
-  .button {
-    width: 245px;
-    padding-top: 17px;
-    padding-bottom: 15px;
+@media (min-width: $mobile-width) and (min-width: $tablet-width) {
+  .button--size-m {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 
-    font-size: 20px;
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .button--size-l {
+    font-size: 16px;
     line-height: 20px;
   }
 }
