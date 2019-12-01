@@ -2,6 +2,7 @@
   display: block;
 
   text-align: center;
+  text-transform: uppercase;
 
   border: none;
 
@@ -39,23 +40,23 @@
 }
 
 // // ======================================================================
-//    #Talbet styles
+//    #Mobile styles
 // // ======================================================================
 
-@media (min-width: $mobile-width) and (min-width: $tablet-width) {
-  .button--size-m {
+@media (min-width: $mobile-width) {
+  .button--size-s {
     font-size: 16px;
     line-height: 20px;
   }
 }
 
 // // ======================================================================
-//    ##Tablet styles
+//    #Tablet styles
 // // ======================================================================
 
-@media (min-width: $desktop-width) {
-  .button--size-l {
-    font-size: 16px;
+@media (min-width: $tablet-width) {
+  .button--size-m {
+    font-size: 20px;
     line-height: 20px;
   }
 }

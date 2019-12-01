@@ -22,25 +22,28 @@
 
 .program__item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.program__base-info .program__item {
+  margin-bottom: 15px;
 }
 
 .program__item:last-child {
   margin-bottom: 0;
 }
 
-.program__item--mgb-15 {
-  margin-bottom: 15px;
-}
-
-.program__item--mgb-25 {
-  margin-bottom: 25px;
-}
-
-.program__base-info {
+.program__cat-info {
   padding-bottom: 20px;
+}
 
+.program__goal {
+  margin-bottom: 30px;
+  padding: 20px 0;
+
+  border-top: 1px solid $line-gray;
   border-bottom: 1px solid $line-gray;
 }
 
@@ -58,6 +61,8 @@
   padding-bottom: 10px;
   padding-left: 10px;
 
+  font-size: 16px;
+  line-height: 18px;
   color: $second-font-color;
   text-transform: uppercase;
   border: 1px solid $line-gray;
@@ -74,13 +79,6 @@
 
 .program__input-text--error {
   border: 1px solid $input-error;
-}
-
-.program__goal {
-  margin-bottom: 30px;
-  padding: 20px 0;
-
-  border-bottom: 1px solid $line-gray;
 }
 
 input[type="radio"]:focus + .program__label--focus,
@@ -138,10 +136,6 @@ input[type="radio"]:checked + .program__label--radio {
   margin-bottom: 30px;
 }
 
-.program__input-icon {
-  padding-right: 35px;
-}
-
 .program__input-icon--mail {
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
@@ -173,6 +167,8 @@ input[type="radio"]:checked + .program__label--radio {
   padding: 15px 5px;
 
   font-size: 16px;
+  line-height: 18px;
+  color: $second-font-color;
   text-align: center;
   text-transform: uppercase;
 
@@ -237,13 +233,204 @@ input[type="checkbox"]:checked + .program__label--checkbox {
   }
 }
 
+.program__button {
+  width: 280px;
+  padding: 13px 0;
+  margin-bottom: 20px;
+}
+
 .program__important-field {
   display: block;
 
   margin: 0 auto;
-  margin-top: 20px;
 
+  font-size: 14px;
+  line-height: 16px;
   color: $second-font-color;
   text-align: center;
   text-transform: none;
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .program__title {
+    margin-bottom: 70px;
+  }
+
+  .program__item {
+    margin-bottom: 20px;
+  }
+
+  .program__goal .program__item {
+    margin-bottom: 35px;
+  }
+
+  .program__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .program__cat-info {
+    margin-bottom: 70px;
+    padding-bottom: 0;
+  }
+
+  .program__goal {
+    margin-bottom: 80px;
+    padding: 27px 24px;
+
+    border: 1px solid $line-gray;
+  }
+
+  .program__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program__input-text {
+    padding-top: 16px;
+    padding-right: 5px;
+    padding-bottom: 16px;
+    padding-left: 19px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program__contacts {
+    margin-bottom: 70px;
+  }
+
+  .program__input-icon--mail {
+    background-position: 511px 11px;
+  }
+
+  .program__input-icon--phone {
+    background-position: 490px 8px;
+  }
+
+  .program__comment {
+    margin-bottom: 70px;
+  }
+
+  .program__comment-textarea {
+    padding: 15px 20px;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+  }
+
+  .program__add-goods__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .program__add-goods__item {
+    width: 285px;
+    margin-bottom: 55px;
+  }
+
+  .program__add-goods__item:nth-child(odd) {
+    margin-right: 60px;
+  }
+
+  .program__add-goods__item:last-child {
+    margin-bottom: 55px;
+  }
+
+  .program__add-goods__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .program__button {
+    margin-right: 60px;
+    margin-bottom: 0;
+  }
+
+  .program__important-field {
+    margin: 0;
+
+    font-size: 16px;
+  }
+}
+
+// // ======================================================================
+//    ##Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .program__base-info-wrapper {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 70px;
+  }
+
+  .program__input-text {
+    padding-top: 16px;
+    padding-right: 19px;
+    padding-bottom: 17px;
+    padding-left: 19px;
+  }
+
+  .program__cat-info,
+  .program__goal {
+    width: 570px;
+    margin-bottom: 0;
+  }
+
+  .program__cat-info {
+    margin-right: 80px;
+  }
+
+  .program__goal {
+    padding: 35px 27px;
+  }
+
+  .program__contacts-list {
+    display: flex;
+  }
+
+  .program__item--mail,
+  .program__item--phone {
+    width: 570px;
+    margin-bottom: 0;
+  }
+
+  .program__item--mail {
+    margin-right: 80px;
+  }
+
+  .program__input-icon--mail {
+    background-position: 450px 20px;
+  }
+
+  .program__input-icon--phone {
+    background-position: 430px 17px;
+  }
+
+  .program__add-goods__item {
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 60px;
+  }
+
+  .program__add-goods__item:nth-child(odd) {
+    margin-right: 80px;
+  }
+
+  .program__add-goods__item:last-child {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .program__button {
+    width: 570px;
+    margin-right: 80px;
+  }
 }
