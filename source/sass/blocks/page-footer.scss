@@ -163,6 +163,7 @@
 
   .page-footer__logo {
     width: 135px;
+    padding: 0;
   }
 
   .page-footer__social {
@@ -170,11 +171,14 @@
   }
 
   .page-footer__social-list {
+    padding: 0;
+
     border: none;
   }
 
   .page-footer__copyright {
     width: 165px;
+    padding: 0;
   }
 }
 
@@ -187,6 +191,14 @@
     position: relative;
   }
 
+  .page-footer__contacts-cooperation {
+    margin-left: 0;
+  }
+
+  .page-footer__contacts-address {
+    margin-right: 0;
+  }
+
   .page-footer__contacts-info {
     position: absolute;
     z-index: 1;
@@ -194,6 +206,8 @@
     left: 100px;
 
     width: 570px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     background-color: $bg-color-white;
   }

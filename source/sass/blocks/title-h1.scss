@@ -18,14 +18,14 @@
     text-align: center;
   }
 
-  .title-h1--white {
-    color: $font-color-white;
-  }
-
   .title-h1--size-m {
     font-size: 36px;
     line-height: 60px;
   }
+}
+
+.title-h1--white {
+  color: $font-color-white;
 }
 
 // // ======================================================================

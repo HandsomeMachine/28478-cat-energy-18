@@ -11,24 +11,6 @@
   color: $default-font-second-color;
 }
 
-.title-h3--plus {
-  position: relative;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: -65px;
-    left: 85px;
-
-    width: 31px;
-    height: 31px;
-
-    background-image: url("../img/icon-plus-mobile.svg");
-    background-repeat: no-repeat;
-  }
-}
-
 // // ======================================================================
 //    ##Mobile styles
 // // ======================================================================
@@ -63,20 +45,5 @@
   .title-h3--size-l {
     font-size: 36px;
     line-height: 37px;
-  }
-
-  .title-h3--plus {
-    &::before {
-      top: -125px;
-      left: 45px;
-
-      width: 61px;
-      height: 61px;
-
-      background-image: url("../img/icon-plus.svg");
-      background-repeat: no-repeat;
-
-      opacity: 0.2;
-    }
   }
 }
