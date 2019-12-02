@@ -1,15 +1,15 @@
 .button {
   display: block;
 
-  width: 280px;
-  padding-top: 13px;
-  padding-bottom: 12px;
-
   text-align: center;
+
+  border: none;
+
+  cursor: pointer;
 }
 
 .button--green {
-  color: #ffffff;
+  color: $font-color-white;
 
   background-color: $green;
 
@@ -35,5 +35,27 @@
   &:active {
     background-color: #ebebeb;
     color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+// // ======================================================================
+//    #Talbet styles
+// // ======================================================================
+
+@media (min-width: $mobile-width) and (min-width: $tablet-width) {
+  .button--size-m {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .button--size-l {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

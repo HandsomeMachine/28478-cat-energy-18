@@ -1,19 +1,16 @@
-.additional-goods {
+.additional-goods__wrapper {
   display: flex;
   flex-direction: column;
 }
 
 .additional-goods__title {
   margin: 30px 0;
-
-  font-size: 24px;
-  line-height: 24px;
-  font-weight: 400;
-  text-transform: none;
 }
 
 .additional-goods__list {
   @include list-base-style-reset;
+
+  margin-bottom: 40px;
 }
 
 .additional-goods__item {
@@ -26,51 +23,50 @@
   border-bottom: 1px solid $line-gray;
 }
 
-.additional-goods__subtitle {
-  margin-bottom: 15px;
+.additional-goods__item-wrapper {
+  display: flex;
+  flex-direction: column;
 
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.additional-goods__subtitle {
+  width: 280px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .additional-goods__description {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 15px;
+  width: 280px;
+  margin: 0;
 
   font-family: $second-font;
-  color: #222222;
+  line-height: 14px;
+  color: $default-font-second-color;
   text-transform: none;
+}
+
+.additional-goods__button {
+  width: 280px;
+  padding: 13px 0;
 }
 
 .additional-goods__gift {
   position: relative;
 
-  margin-top: 40px;
   margin-bottom: 35px;
-
-  background-color: $green;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-}
-
-.additional-goods__gift-description {
   padding-top: 170px;
   padding-right: 59px;
   padding-bottom: 27px;
   padding-left: 59px;
 
-  font-family: $second-font;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  text-align: center;
-  text-transform: none;
-}
+  background-color: #65a93c;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
 
-.additional-goods__gift--icon {
   &::before {
     content: "";
 
@@ -83,5 +79,150 @@
 
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
+  }
+}
+
+.additional-goods__gift-description {
+  margin: 0;
+
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $font-color-white;
+  text-align: center;
+  text-transform: none;
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .additional-goods__item {
+    padding-top: 27px;
+    padding-right: 36px;
+    padding-bottom: 27px;
+    padding-left: 37px;
+
+    border-left: 1px solid $line-gray;
+    border-right: 1px solid $line-gray;
+  }
+
+  .additional-goods__item-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  .additional-goods__subtitle {
+    margin-bottom: 0;
+  }
+
+  .additional-goods__description {
+    margin-left: auto;
+    margin-bottom: 0;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .additional-goods__button {
+    width: 633px;
+  }
+
+  .additional-goods__gift {
+    padding-top: 55px;
+    padding-right: 10px;
+    padding-bottom: 55px;
+    padding-left: 420px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    &::before {
+      left: 90px;
+    }
+  }
+
+  .additional-goods__gift-description {
+    width: 165px;
+
+    text-align: left;
+  }
+}
+
+// // ======================================================================
+//    ##Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .additional-goods {
+    margin-bottom: 85px;
+  }
+
+  .additional-goods__wrapper {
+    flex-direction: row;
+  }
+
+  .additional-goods__list {
+    width: 895px;
+    margin-bottom: 0;
+  }
+
+  .additional-goods__item {
+    display: flex;
+
+    padding: 12px 0;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .additional-goods__item-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 610px;
+    margin-bottom: 0;
+  }
+
+  .additional-goods__subtitle {
+    width: 285px;
+  }
+
+  .additional-goods__description {
+    width: 285px;
+    margin-left: 0;
+  }
+
+  .additional-goods__button {
+    width: 245px;
+
+    margin-left: auto;
+  }
+
+  .additional-goods__gift {
+    width: 245px;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding-top: 190px;
+    padding-right: 42px;
+    padding-bottom: 0;
+    padding-left: 42px;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    &::before {
+      left: 90px;
+    }
+  }
+
+  .additional-goods__gift-description {
+    width: 165px;
+
+    text-align: center;
   }
 }

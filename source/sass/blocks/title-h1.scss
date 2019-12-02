@@ -1,0 +1,39 @@
+.title-h1 {
+  font-weight: 400;
+  color: $default-font-color;
+  text-transform: none;
+}
+
+// // ======================================================================
+//    ##Mobile styles
+// // ======================================================================
+
+@media (min-width: $mobile-width) {
+  .title-h1--size-s {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .title-h1--white {
+    color: $font-color-white;
+  }
+
+  .title-h1--size-m {
+    font-size: 36px;
+    line-height: 60px;
+  }
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .title-h1--size-l {
+    font-size: 60px;
+    line-height: 60px;
+    color: $default-font-color;
+    text-align: left;
+  }
+}

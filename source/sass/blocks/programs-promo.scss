@@ -1,16 +1,13 @@
 .programs-promo__list {
   @include list-base-style-reset;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .programs-promo__item {
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 20px;
-  padding-top: 29px;
-  padding-right: 20px;
-  padding-bottom: 22px;
-  padding-left: 20px;
+  padding: 25px 20px;
 
   background-color: $bg-color-gray;
 }
@@ -26,12 +23,6 @@
   margin-bottom: 26px;
   padding-left: 71px;
 
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-}
-
-.programs-promo__icon {
   &::before {
     content: "";
 
@@ -53,7 +44,7 @@
   }
 }
 
-.programs-promo__icon--weight-loss {
+.programs-promo__title--weight-loss {
   &::after {
     top: -7px;
     left: 8px;
@@ -66,7 +57,7 @@
   }
 }
 
-.programs-promo__icon--weight-gain {
+.programs-promo__title--weight-gain {
   &::after {
     top: 6px;
     left: -8px;
@@ -81,7 +72,7 @@
 
 .programs-promo__description {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   padding-right: 15px;
   padding-bottom: 25px;
 
@@ -95,7 +86,7 @@
 .programs-promo__link {
   position: relative;
 
-  padding-right: 37px;
+  padding-right: 35px;
 
   font-size: 16px;
   line-height: 16px;
@@ -111,7 +102,7 @@
     content: "";
 
     position: absolute;
-    top: 8px;
+    top: 4px;
 
     width: 24px;
     height: 11px;
@@ -134,5 +125,135 @@
   &:active {
     color: rgba(17, 17, 17, 0.3);
     opacity: 0.3;
+  }
+}
+
+// // ======================================================================
+//    #Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .programs-promo__item {
+    padding-top: 60px;
+    padding-right: 270px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+  }
+
+  .programs-promo__title {
+    padding-left: 0;
+
+    &::before {
+      top: 20px;
+      left: 400px;
+
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs-promo__title--weight-loss {
+    &::after {
+      top: 4px;
+      left: 430px;
+
+      width: 140px;
+      height: 194px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__title--weight-gain {
+    &::after {
+      top: 78px;
+      left: 370px;
+
+      width: 268px;
+      height: 112px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__description {
+    border: none;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .programs-promo__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .programs-promo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .programs-promo__item {
+    width: 570px;
+    margin-right: 80px;
+    margin-bottom: 0;
+    padding-right: 55px;
+    padding-left: 50px;
+  }
+
+  .programs-promo__item:last-child {
+    margin-right: 0;
+  }
+
+  .programs-promo__title {
+    margin-bottom: 75px;
+    padding-left: 165px;
+
+    &::before {
+      top: -30px;
+      left: -5px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programs-promo__title--weight-loss {
+    &::after {
+      top: -38px;
+      left: 4px;
+
+      width: 71px;
+      height: 97px;
+
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__title--weight-gain {
+    &::after {
+      top: -7px;
+      left: -21px;
+
+      width: 134px;
+      height: 57px;
+
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .programs-promo__description {
+    margin-bottom: 35px;
+    padding-bottom: 0;
   }
 }

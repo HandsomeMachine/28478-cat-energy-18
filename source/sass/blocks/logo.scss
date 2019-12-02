@@ -1,6 +1,4 @@
 .logo {
-  height: 39px;
-
   &[href]:hover,
   &[href]:focus {
     opacity: 0.8;
@@ -13,8 +11,21 @@
 
 .logo__image--header {
   width: 191px;
+  height: 39px;
 }
 
 .logo__image--footer {
   width: 128px;
+  height: 24px;
+}
+
+// // ======================================================================
+//    #Talbet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .logo__image--header {
+    width: 174px;
+    height: 59px;
+  }
 }

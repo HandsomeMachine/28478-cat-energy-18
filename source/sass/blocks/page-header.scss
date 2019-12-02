@@ -1,28 +1,25 @@
 .page-header {
   display: flex;
   flex-direction: column;
-
-  width: 320px;
 }
 
 .page-header__wrapper {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 
-  padding-bottom: 10px;
-  padding-left: 20px;
-
-  border-bottom: 1px solid $line-gray;
+  width: 280px;
+  margin: 0 auto;
+  padding: 11px 0;
 }
 
 .page-header__toggle {
   width: 24px;
   height: 18px;
-  margin-top: 10px;
+  margin-left: auto;
 
   border: none;
 
-  background-color: transparent;
+  background-color: $bg-color-white;
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -34,4 +31,156 @@
   background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.page-header__intro {
+  position: relative;
+
+  width: 100%;
+
+  background: linear-gradient(to bottom, #65a93c 64%, $bg-color-white 36%);
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: calc(50% - 160px);
+    z-index: 1;
+
+    width: 320px;
+    height: 305px;
+
+    background-image: url("../img/index-background-mobile@1x.jpg");
+  }
+}
+
+.page-header__intro-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header__title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.page-header__description {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.page-header__description-slogan {
+  margin: 0;
+}
+
+.page-header__button {
+  width: 280px;
+  margin-bottom: 25px;
+  padding-top: 13px;
+  padding-bottom: 12px;
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .page-header__top-wrapper {
+    display: flex;
+    align-items: center;
+
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .page-header__wrapper {
+    width: 190px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__main-nav {
+    margin-left: auto;
+  }
+
+  .page-header__intro {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $bg-color-white;
+    background-image: none;
+
+    &::after {
+      background-image: none;
+    }
+  }
+
+  .page-header__intro-wrapper {
+    padding-left: 80px;
+  }
+
+  .page-header__title {
+    order: 0;
+
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .page-header__description-slogan {
+    margin-bottom: 50px;
+  }
+
+  .page-header__description-image {
+    order: 1;
+
+    margin-top: -85px;
+    margin-left: -90px;
+  }
+
+  .page-header__button {
+    order: 0;
+    z-index: 1;
+
+    width: 245px;
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 15px;
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    margin-bottom: 130px;
+  }
+
+  .page-header--green {
+    background: linear-gradient(to right, $bg-color-white 50%, $green 50%);
+  }
+
+  .page-header__top-wrapper {
+    width: 1440px;
+    padding: 0 110px;
+  }
+
+  .page-header__wrapper {
+    width: 245px;
+  }
+
+  .page-header__intro {
+    background-color: transparent;
+  }
+
+  .page-header__title {
+    width: 410px;
+  }
 }

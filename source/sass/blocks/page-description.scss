@@ -1,0 +1,41 @@
+.page-description__slogan {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+// // ======================================================================
+//    ##Mobile styles
+// // ======================================================================
+
+@media (min-width: $mobile-width) {
+  .page-description__slogan--size-xs {
+    line-height: 14px;
+    color: $font-color-white;
+    text-align: center;
+  }
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .page-description {
+    display: flex;
+    flex-direction: column;
+
+    width: 325px;
+  }
+
+  .page-description__slogan--size-m {
+    font-size: 20px;
+    line-height: 20px;
+    color: $default-font-color;
+    text-align: left;
+  }
+
+  .page-description__slogan--size-l {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
