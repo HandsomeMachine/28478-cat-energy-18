@@ -1,3 +1,38 @@
-// .page-main {
-//   color: red;
-// }
+.page-main__title {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.page-main__description {
+  margin-bottom: 40px;
+}
+
+// // ======================================================================
+//    ##Tablet styles
+// // ======================================================================
+
+@media (min-width: $tablet-width) {
+  .page-main__wrapper {
+    padding-left: 35px;
+    padding-right: 40px;
+  }
+
+  .page-main__title {
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+
+  .page-main__description {
+    margin-bottom: 65px;
+  }
+}
+
+// // ======================================================================
+//    #Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .page-main__wrapper {
+    padding: 0;
+  }
+}

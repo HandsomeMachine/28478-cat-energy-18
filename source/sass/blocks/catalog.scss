@@ -20,6 +20,24 @@
   border-bottom: 1px solid $line-gray;
 }
 
+.catalog__item--plus {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 40px;
+    left: 125px;
+
+    width: 31px;
+    height: 31px;
+
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .catalog__image {
   width: 140px;
   height: 144px;
@@ -86,7 +104,7 @@
 
 .catalog__item-button {
   width: 280px;
-  padding: 13px 0;
+  padding: 13px 10px;
 }
 
 // // ======================================================================
@@ -104,6 +122,7 @@
 
     width: 324px;
     height: 515px; //временно
+    margin-right: 40px;
     margin-bottom: 140px;
     padding-top: 40px;
     padding-right: 37px;
@@ -114,11 +133,12 @@
     background-color: $bg-color-gray;
   }
 
-  .catalog__item:nth-child(2n + 1) {
-    margin-right: 40px;
+  .catalog__item:nth-child(even) {
+    margin-right: 0;
   }
 
-  .catalog__item:nth-child(n + 7) {
+  .catalog__item:nth-last-child(1),
+  .catalog__item:nth-last-child(2) {
     margin-bottom: 0;
   }
 
@@ -129,6 +149,21 @@
 
     background-color: $bg-color-white;
     border: 1px solid $line-gray;
+  }
+
+  .catalog__item--plus {
+    &::before {
+      top: 85px;
+      left: 125px;
+
+      width: 61px;
+      height: 61px;
+
+      background-image: url("../img/icon-plus.svg");
+      background-repeat: no-repeat;
+
+      opacity: 0.2;
+    }
   }
 
   .catalog__item-characteristics {
@@ -188,16 +223,26 @@
     margin-right: 80px;
   }
 
-  .catalog__item:nth-child(n + 5) {
+  .catalog__item:nth-last-child(1),
+  .catalog__item:nth-last-child(2),
+  .catalog__item:nth-last-child(3),
+  .catalog__item:nth-last-child(4) {
     margin-bottom: 0;
   }
 
-  .catalog__item:nth-child(2n + 1) {
+  .catalog__item:nth-child(even) {
     margin-right: 80px;
   }
 
   .catalog__item:nth-child(4n) {
     margin-right: 0;
+  }
+
+  .catalog__item--plus {
+    &::before {
+      top: 85px;
+      left: 95px;
+    }
   }
 
   .catalog__item-characteristics {

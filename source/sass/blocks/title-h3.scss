@@ -1,4 +1,7 @@
 .title-h3 {
+  margin: 0;
+  padding: 0;
+
   font-weight: 400;
   color: $default-font-color;
   text-transform: uppercase;
@@ -6,24 +9,6 @@
 
 .title-h3--light-black {
   color: $default-font-second-color;
-}
-
-.title-h3--plus {
-  position: relative;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: -65px;
-    left: 85px;
-
-    width: 31px;
-    height: 31px;
-
-    background-image: url("../img/icon-plus-mobile.svg");
-    background-repeat: no-repeat;
-  }
 }
 
 // // ======================================================================
@@ -60,20 +45,5 @@
   .title-h3--size-l {
     font-size: 36px;
     line-height: 37px;
-  }
-
-  .title-h3--plus {
-    &::before {
-      top: -125px;
-      left: 45px;
-
-      width: 61px;
-      height: 61px;
-
-      background-image: url("../img/icon-plus.svg");
-      background-repeat: no-repeat;
-
-      opacity: 0.2;
-    }
   }
 }
