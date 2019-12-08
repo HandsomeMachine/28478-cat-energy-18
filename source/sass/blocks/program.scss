@@ -50,6 +50,8 @@
 .program__label {
   font-size: 16px;
   color: $default-font-second-color;
+
+  cursor: pointer;
 }
 
 .program__input-text {
@@ -173,6 +175,8 @@ input[type="radio"]:checked + .program__label--radio {
   text-transform: uppercase;
 
   border: 1px solid $line-gray;
+
+  resize: none;
 
   &:hover,
   &:focus {

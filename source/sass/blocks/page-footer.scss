@@ -11,7 +11,8 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 35px 0;
+  padding-top: 29px;
+  padding-bottom: 25px;
 }
 
 .page-footer__contacts-cooperation {
@@ -36,49 +37,15 @@
 
 .page-footer__contacts-map {
   width: 100%;
-  min-height: 400px;
-}
-
-// // ======================================================================
-//    #Tablet styles
-// // ======================================================================
-
-@media (min-width: $tablet-width) {
-  .page-footer__contacts-info {
-    padding: 65px 0;
-  }
-
-  .page-footer__contacts-cooperation {
-    width: 155px;
-    margin-left: 40px;
-  }
-
-  .page-footer__contacts-intro {
-    font-size: 20px;
-    line-height: 25px;
-  }
-
-  .page-footer__contacts-address {
-    margin-right: 40px;
-
-    font-size: 16px;
-  }
-
-  .page-footer__contacts-street {
-    display: block;
-    margin-bottom: 20px;
-  }
-
-  .page-footer__contacts-map {
-    width: 100%;
-  }
+  min-height: 362px;
 }
 
 .page-footer__logo {
   display: flex;
   justify-content: center;
 
-  padding: 25px 0;
+  padding-top: 40px;
+  padding-bottom: 31px;
 }
 
 .page-footer__social-list {
@@ -88,7 +55,8 @@
   justify-content: center;
   align-items: center;
 
-  padding: 25px 0;
+  padding-top: 22px;
+  padding-bottom: 19px;
 
   border-top: 1px solid $line-gray-darken;
   border-bottom: 1px solid $line-gray-darken;
@@ -114,8 +82,34 @@
   }
 }
 
+.page-footer__social-link--vkontakte svg {
+  width: 22px;
+  height: 12px;
+}
+
+.page-footer__social-link--instagram svg {
+  width: 17px;
+  height: 17px;
+}
+
+.page-footer__social-link--facebook svg {
+  width: 10px;
+  height: 19px;
+}
+
 .page-footer__copyright {
-  padding: 25px 0;
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+
+.page-footer__copyright-text {
+  margin: 0;
+
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 16px;
+  color: $second-font-color;
+  text-transform: none;
 }
 
 .page-footer__copyright-link {
@@ -135,39 +129,61 @@
   }
 }
 
-.page-footer__copyright-text {
-  margin: 0;
-
-  font-family: $second-font;
-  font-size: 16px;
-  line-height: 16px;
-  color: $second-font-color;
-  text-transform: none;
-}
-
 .page-footer__copyright-image {
   width: 27px;
   height: 34px;
 }
 
+// // ======================================================================
+//    #Tablet styles
+// // ======================================================================
+
 @media (min-width: $tablet-width) {
+  .page-footer__contacts-info {
+    padding: 59px 0;
+  }
+
+  .page-footer__contacts-cooperation {
+    width: 155px;
+    margin-left: 40px;
+    padding-top: 6px;
+  }
+
+  .page-footer__contacts-intro {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .page-footer__contacts-address {
+    margin-right: 40px;
+    padding-top: 4px;
+
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .page-footer__contacts-street {
+    display: block;
+    margin-bottom: 19px;
+  }
+
+  .page-footer__contacts-map {
+    width: 100%;
+    min-height: 400px;
+  }
+
   .page-footer__wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
 
-    padding-top: 50px;
+    padding-top: 55px;
     padding-bottom: 60px;
   }
 
   .page-footer__logo {
-    width: 135px;
+    margin-right: 156px;
     padding: 0;
-  }
-
-  .page-footer__social {
-    width: 220px;
   }
 
   .page-footer__social-list {
@@ -176,9 +192,33 @@
     border: none;
   }
 
+  .page-footer__social-item {
+    margin-right: 29px;
+  }
+
+  .page-footer__social-link--vkontakte svg {
+    width: 30px;
+    height: 16px;
+  }
+
+  .page-footer__social-link--instagram svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .page-footer__social-link--facebook svg {
+    width: 14px;
+    height: 28px;
+  }
+
   .page-footer__copyright {
     width: 165px;
+    margin-left: auto;
     padding: 0;
+  }
+
+  .page-footer__copyright-text {
+    margin: 0;
   }
 }
 
@@ -191,24 +231,31 @@
     position: relative;
   }
 
+  .page-footer__contacts-info {
+    position: absolute;
+    z-index: 1;
+    top: 92px;
+    left: 109px;
+
+    width: 570px;
+    padding-left: 77px;
+    padding-right: 89px;
+
+    background-color: $bg-color-white;
+  }
+
   .page-footer__contacts-cooperation {
     margin-left: 0;
   }
 
   .page-footer__contacts-address {
+    width: 155px;
     margin-right: 0;
+
+    text-align: left;
   }
 
-  .page-footer__contacts-info {
-    position: absolute;
-    z-index: 1;
-    top: 100px;
-    left: 100px;
-
-    width: 570px;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    background-color: $bg-color-white;
+  .page-footer__logo {
+    margin-right: 412px;
   }
 }

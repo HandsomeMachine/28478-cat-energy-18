@@ -1,18 +1,28 @@
 var map;
-var mapCoordinates = { lat: 59.938905, lng: 30.319311 };
-var markerCoordinates = { lat: 59.938874, lng: 30.323529 };
-var markerImage = 'img/map-pin.png';
+var mapCoordinates = { lat: 59.93879, lng: 30.323199 };
+var markerCoordinates = { lat: 59.93879, lng: 30.323199 };
+var markerImage = "img/map-pin.png";
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
+  var mapOptions = {
     center: mapCoordinates,
-    zoom: 17
-  });
+    zoom: 17,
+    mapTypeControl: false,
+    zoomControl: true,
+    scrollwheel: false,
+    zoomControlOptions: { position: google.maps.ControlPosition.LEFT_TOP },
+    streetViewControl: false
+  };
+
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
   var marker = new google.maps.Marker({
     position: markerCoordinates,
     map: map,
     animation: google.maps.Animation.DROP,
+    title: "ул. Большая Конюшенная, д. 19/8",
     icon: markerImage
   });
 }
+
+google.maps.event.addDomListener(window, "load", initMap);

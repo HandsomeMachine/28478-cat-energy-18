@@ -1,10 +1,13 @@
 .features {
-  padding: 35px 0;
+  padding-top: 19px;
+  padding-right: 0;
+  padding-bottom: 48px;
+  padding-left: 0;
 }
 
 .features__title {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 }
 
 .features__list {
@@ -19,7 +22,7 @@
 }
 
 .features__item {
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
 
 .features__item:last-child {
@@ -36,7 +39,7 @@
     content: "";
 
     position: absolute;
-    top: 0;
+    top: -3px;
     left: 0;
 
     width: 60px;
@@ -76,21 +79,29 @@
 }
 
 // // ======================================================================
-//    #Talbet styles
+//    #Tablet styles
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
+  .features {
+    padding-top: 45px;
+    padding-bottom: 103px;
+  }
+
+  .features__title {
+    margin-bottom: 75px;
+  }
+
   .features__list {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .features__item {
     position: relative;
 
     width: 245px;
-    margin-bottom: 140px;
+    margin-bottom: 135px;
 
     background-color: none;
 
@@ -106,17 +117,50 @@
       z-index: -1;
 
       font-family: $default-font;
-      font-size: 261px;
+      font-size: 280px;
       color: $bg-color-gray;
     }
   }
 
-  .features__item:nth-child(2n+1) {
-    margin-right: 185px;
+  .features__item:nth-child(1) {
+    &::after {
+      top: 88px;
+      right: 16px;
+    }
+  }
+
+  .features__item:nth-child(2) {
+    &::after {
+      top: 88px;
+      right: 0;
+    }
+  }
+
+  .features__item:nth-child(3) {
+    &::after {
+      top: 89px;
+      right: -2px;
+    }
+  }
+
+  .features__item:nth-child(4) {
+    &::after {
+      top: 90px;
+      right: -3px;
+    }
+  }
+
+  .features__item:nth-child(2n + 1) {
+    margin-right: 140px;
+  }
+
+  .features__item:nth-last-child(1),
+  .features__item:nth-last-child(2) {
+    margin-bottom: 0;
   }
 
   .features__description {
-    padding-top: 100px;
+    padding-top: 109px;
     padding-left: 0;
 
     font-size: 16px;
@@ -136,13 +180,18 @@
 // // ======================================================================
 
 @media (min-width: $desktop-width) {
+  .features {
+    padding-top: 72px;
+    // padding-bottom: 103px;
+  }
+
   .features__item {
     width: 245px;
     margin-right: 80px;
     margin-bottom: 0;
   }
 
-  .features__item:nth-child(2n+1) {
+  .features__item:nth-child(2n + 1) {
     margin-right: 80px;
   }
 
@@ -151,6 +200,6 @@
   }
 
   .features__description {
-    padding-top: 120px;
+    padding-top: 108px;
   }
 }

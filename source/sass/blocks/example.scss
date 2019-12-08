@@ -1,19 +1,26 @@
 .example {
   display: flex;
+  flex-direction: column;
 
-  padding-top: 35px;
+  padding-top: 15px;
 
   background-color: $bg-color-gray;
 }
 
+.example__container {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .example__title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 23px;
 }
 
 .example__description {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
   padding-right: 5px;
 
   font-family: $second-font;
@@ -24,7 +31,7 @@
 .example__table {
   display: flex;
 
-  margin-bottom: 25px;
+  margin-bottom: 14px;
 }
 
 .example__weight-loss,
@@ -39,8 +46,8 @@
 }
 
 .example__data {
-  width: 123px;
-  padding: 27px 20px;
+  width: 124px;
+  padding: 15px 20px;
 
   font-size: 24px;
   line-height: 24px;
@@ -54,7 +61,7 @@
   z-index: 1;
 
   width: 87px;
-  margin-top: -20px;
+  margin-top: -14px;
   padding: 5px 15px;
 
   font-family: $second-font;
@@ -69,25 +76,26 @@
 
 .example__budget-spend {
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 33px;
 
   line-height: 20px;
   text-align: center;
 }
 
 .example-slider {
-  padding-bottom: 35px;
+  margin: 0 auto;
+  padding-bottom: 29px;
 }
 
 .example-slider__list {
   @include list-base-style-reset;
 
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 }
 
 .example-slider__image {
-  width: 311px;
-  height: 232px;
+  width: 320px;
+  height: 240px;
 }
 
 .example-slider__actions {
@@ -102,6 +110,7 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  color: $default-font-color;
 
   cursor: pointer;
 
@@ -120,13 +129,13 @@
 }
 
 .example-slider__bar {
-  width: 80px;
+  width: 84px;
   height: 14px;
   margin: 0 13px;
-  padding: 2px 5px;
+  padding: 3px 6px;
 
   background-color: $bg-color-white;
-  border: 2px solid $line-gray-darken2;
+  border: 1px solid $line-gray-darken2;
   border-radius: 5px;
 }
 
@@ -141,21 +150,30 @@
 }
 
 // // ======================================================================
-//    #Talbet styles
+//    #Tablet styles
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
   .example {
-    background: linear-gradient(to bottom, $bg-color-white 60%, $bg-color-gray 40%);
+    padding-top: 42px;
+
+    background: linear-gradient(to bottom, $bg-color-white 620px, $bg-color-gray 620px);
 
     border-top: 1px solid $line-gray;
   }
 
   .example__title {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
+  }
+
+  .example__container {
+    width: $tablet-width;
+    min-height: 620px;
+    padding: 0 30px;
   }
 
   .example__description {
+    margin-bottom: 54px;
     padding-right: 30px;
 
     font-size: 16px;
@@ -174,18 +192,20 @@
   }
 
   .example__weight-loss {
-    margin-right: 52px;
+    margin-right: 43px;
   }
 
   .example__data {
-    width: 160px;
+    width: 162px;
+    padding-top: 14px;
+    padding-bottom: 19px;
 
     font-size: 30px;
     line-height: 37px;
   }
 
   .example__text {
-    margin-top: -15px;
+    margin-top: -13px;
     padding: 5px 8px;
 
     font-size: 14px;
@@ -203,15 +223,34 @@
   }
 
   .example__budget-spend {
+    display: flex;
+    flex-direction: column;
+
     width: 175px;
+    margin-bottom: 26px;
     margin-left: auto;
 
     font-size: 20px;
     text-align: right;
   }
 
+  .example__budget-spend-text {
+    margin-bottom: 6px;
+  }
+
+  .example-slider {
+    padding-bottom: 68px;
+  }
+
   .example-slider__image {
+    position: relative;
+    top: -213px;
+    left: 7px;
+
+    width: 690px;
+    height: 517px;
     margin: 0 auto;
+    margin-bottom: -226px;
   }
 
   .example-slider__button {
@@ -223,12 +262,13 @@
 
     width: 428px;
     height: 6px;
+    margin: 0 17px;
   }
 
   .example-slider__toggle {
     position: absolute;
-    top: -15px;
-    left: 6px;
+    top: -13px;
+    left: 198px;
 
     width: 34px;
     height: 34px;
@@ -258,29 +298,46 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    border-top: none;
+    flex-direction: row;
 
-    background: linear-gradient(to bottom, $bg-color-white 30%, $bg-color-gray 30%);
+    width: $desktop-width;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-right: 110px;
+    padding-left: 110px;
+
+    background: linear-gradient(to bottom, $bg-color-white 159px, $bg-color-gray 159px);
+
+    border-top: none;
   }
 
   .example__container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+
+    width: 470px;
+    min-height: 600px;
+    margin: 0;
+    margin-right: 64px;
+    padding: 0;
+  }
+
+  .example__title {
+    margin: 0;
+    margin-bottom: 70px;
   }
 
   .example__description-wrapper {
     display: flex;
     flex-direction: column;
 
-    width: 570px;
-    margin-right: 40px;
     padding-top: 75px;
-    padding-right: 105px;
+    padding-right: 5px;
     padding-bottom: 75px;
   }
 
   .example__description {
-    margin-bottom: 60px;
+    margin-bottom: 69px;
   }
 
   .example__wrapper {
@@ -289,6 +346,7 @@
 
   .example__table {
     margin-right: auto;
+    margin-bottom: 51px;
   }
 
   .example__text {
@@ -297,17 +355,38 @@
 
   .example__budget-spend {
     display: flex;
-    width: 375px;
+    flex-direction: row;
+
+    width: 470px;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: 0;
   }
 
   .example__budget-spend-text {
-    margin-right: 75px;
+    width: 175px;
+    margin-right: 62px;
+    margin-bottom: 0;
   }
 
   .example-slider {
-    width: 610px;
+    width: 690px;
+  }
+
+  .example-slider__list {
+    margin-bottom: 0;
+  }
+
+  .example-slider__image {
+    position: relative;
+    top: -55px;
+    left: 37px;
+
+    margin-bottom: 0;
+  }
+
+  .example-slider__actions {
+    margin-top: -21px;
+    margin-left: 111px;
   }
 }
