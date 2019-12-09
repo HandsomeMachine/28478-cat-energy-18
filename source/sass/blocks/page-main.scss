@@ -1,6 +1,13 @@
 .page-main__title {
-  margin-top: 30px;
-  margin-bottom: 35px;
+  width: $mobile-width;
+  margin: 0 auto;
+  margin-bottom: 29px;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  border-top: 1px solid $line-gray;
+  border-bottom: 1px solid $line-gray;
 }
 
 .page-main__description {
@@ -18,8 +25,14 @@
   }
 
   .page-main__title {
-    margin-top: 65px;
-    margin-bottom: 50px;
+    width: $tablet-width;
+    margin-bottom: 165px;
+    padding-top: 28px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    border-top: none;
+    border-bottom: none;
   }
 
   .page-main__description {
@@ -34,5 +47,12 @@
 @media (min-width: $desktop-width) {
   .page-main__wrapper {
     padding: 0;
+  }
+
+  .page-main__title {
+    width: $desktop-width;
+    padding-top: 65px;
+    padding-right: 110px;
+    padding-left: 110px;
   }
 }

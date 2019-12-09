@@ -9,7 +9,7 @@
 
   width: 280px;
   margin: 0 auto;
-  padding: 11px 0;
+  padding: 13px 0;
 }
 
 .page-header__toggle {
@@ -37,8 +37,9 @@
   position: relative;
 
   width: 100%;
+  padding-top: 28px;
 
-  background: linear-gradient(to bottom, #65a93c 64%, $bg-color-white 36%);
+  background: linear-gradient(to bottom, #65a93c 306px, $bg-color-white 174px);
 
   &::after {
     content: "";
@@ -61,23 +62,26 @@
 }
 
 .page-header__title {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.page-header__description {
-  margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .page-header__description-slogan {
-  margin: 0;
+  margin-bottom: 300px;
 }
 
 .page-header__button {
   width: 280px;
-  margin-bottom: 25px;
-  padding: 13px 10px;
+  margin-bottom: 21px;
+  padding-top: 14px;
+  padding-right: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+}
+
+.page-header__description-image {
+  position: absolute;
+  top: 140px;
+  left: 0;
 }
 
 // // ======================================================================
@@ -89,15 +93,21 @@
     display: flex;
     align-items: center;
 
-    width: 768px;
-    margin: 0 auto;
-    padding: 0 30px;
+    width: $tablet-width;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 22px;
+    margin-left: auto;
+    padding-top: 19px;
+    padding-right: 31px;
+    padding-bottom: 0;
+    padding-left: 29px;
   }
 
   .page-header__wrapper {
-    width: 190px;
+    width: 192px;
     margin: 0;
-    padding: 0;
+    padding: 5px 0;
   }
 
   .page-header__toggle {
@@ -112,38 +122,38 @@
     display: flex;
     flex-direction: column;
 
+    min-height: 836px;
+
     background-color: $bg-color-white;
     background-image: none;
 
     &::after {
+      width: 0;
+      height: 0;
+
       background-image: none;
     }
   }
 
   .page-header__intro-wrapper {
-    padding-left: 80px;
+    padding-left: 87px;
   }
 
   .page-header__title {
-    order: 0;
+    margin: 0;
+    margin-bottom: 41px;
+  }
 
-    margin-top: 60px;
-    margin-bottom: 30px;
+  .page-header__description {
+    width: $tablet-width;
   }
 
   .page-header__description-slogan {
-    margin-bottom: 50px;
-  }
-
-  .page-header__description-image {
-    order: 1;
-
-    margin-top: -85px;
-    margin-left: -90px;
+    margin-bottom: 47px;
   }
 
   .page-header__button {
-    order: 0;
+    position: relative;
     z-index: 1;
 
     width: 245px;
@@ -153,6 +163,15 @@
     padding-bottom: 15px;
     padding-left: 10px;
   }
+
+  .page-header__description-image {
+    position: relative;
+
+    width: 708px;
+    height: 609px;
+    margin-top: -220px;
+    margin-left: -87px;
+  }
 }
 
 // // ======================================================================
@@ -161,27 +180,77 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
-    margin-bottom: 130px;
+    position: relative;
   }
 
   .page-header--green {
-    background: linear-gradient(to right, $bg-color-white 50%, $green 50%);
+    background: linear-gradient(to right, $bg-color-white 50%, #65a93c 50%);
+  }
+
+  .page-header--bg-image {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 720px;
+      height: 694px;
+
+      background-color: $green;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2.jpg");
+      }
+    }
   }
 
   .page-header__top-wrapper {
-    width: 1440px;
+    width: $desktop-width;
+    margin-bottom: 0;
     padding: 0 110px;
+    padding-top: 46px;
   }
 
   .page-header__wrapper {
     width: 245px;
   }
 
+  .page-header__main-nav {
+    z-index: 1;
+  }
+
   .page-header__intro {
-    background-color: transparent;
+    min-height: 573px;
+    padding-top: 99px;
+
+    background: linear-gradient(to right, $bg-color-white 50%, #65a93c 50%);
+  }
+
+  .page-header__intro-wrapper {
+    padding-left: 80px;
   }
 
   .page-header__title {
     width: 410px;
+  }
+
+  .page-header__description {
+    width: $desktop-width;
+  }
+
+  .page-header__description-slogan {
+    margin-bottom: 51px;
+  }
+
+  .page-header__description-image {
+    position: relative;
+
+    width: 552px;
+    height: 499px;
+    margin-top: -505px;
+    margin-left: 370px;
   }
 }

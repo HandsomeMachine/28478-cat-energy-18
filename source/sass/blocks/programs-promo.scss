@@ -6,8 +6,11 @@
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 20px;
-  padding: 25px 20px;
+  margin-bottom: 19px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 21px;
+  padding-left: 20px;
 
   background-color: $bg-color-gray;
 }
@@ -20,7 +23,7 @@
   position: relative;
 
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
   padding-left: 71px;
 
   &::before {
@@ -28,7 +31,7 @@
 
     position: absolute;
     top: -6px;
-    left: 0;
+    left: 2px;
 
     width: 50px;
     height: 50px;
@@ -46,8 +49,8 @@
 
 .programs-promo__title--weight-loss {
   &::after {
-    top: -7px;
-    left: 8px;
+    top: -8px;
+    left: 10px;
 
     width: 35px;
     height: 49px;
@@ -59,8 +62,8 @@
 
 .programs-promo__title--weight-gain {
   &::after {
-    top: 6px;
-    left: -8px;
+    top: 5px;
+    left: -6px;
 
     width: 67px;
     height: 28px;
@@ -72,9 +75,9 @@
 
 .programs-promo__description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   padding-right: 15px;
-  padding-bottom: 25px;
+  padding-bottom: 22px;
 
   font-family: $second-font;
   color: $second-font-color;
@@ -102,11 +105,11 @@
     content: "";
 
     position: absolute;
-    top: 4px;
+    top: 3px;
+    left: 96px;
 
     width: 24px;
     height: 11px;
-    margin-left: 5px;
 
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
@@ -134,18 +137,20 @@
 
 @media (min-width: $tablet-width) {
   .programs-promo__item {
-    padding-top: 60px;
+    margin-bottom: 30px;
+    padding-top: 78px;
     padding-right: 270px;
-    padding-bottom: 60px;
-    padding-left: 50px;
+    padding-bottom: 61px;
+    padding-left: 53px;
   }
 
   .programs-promo__title {
+    margin-bottom: 24px;
     padding-left: 0;
 
     &::before {
-      top: 20px;
-      left: 400px;
+      top: 15px;
+      left: 394px;
 
       width: 200px;
       height: 200px;
@@ -155,7 +160,7 @@
   .programs-promo__title--weight-loss {
     &::after {
       top: 4px;
-      left: 430px;
+      left: 424px;
 
       width: 140px;
       height: 194px;
@@ -167,8 +172,8 @@
 
   .programs-promo__title--weight-gain {
     &::after {
-      top: 78px;
-      left: 370px;
+      top: 58px;
+      left: 360px;
 
       width: 268px;
       height: 112px;
@@ -179,15 +184,29 @@
   }
 
   .programs-promo__description {
-    border: none;
+    margin-bottom: 35px;
+    padding-right: 5px;
 
     font-size: 16px;
     line-height: 24px;
+
+    border: none;
+  }
+
+  .programs-promo__item:nth-child(2) .programs-promo__description {
+    padding-right: 45px;
   }
 
   .programs-promo__link {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .programs-promo__link--arrow {
+    &::after {
+      top: 5px;
+      left: 131px;
+    }
   }
 }
 
@@ -196,6 +215,10 @@
 // // ======================================================================
 
 @media (min-width: $desktop-width) {
+  .programs-promo {
+    padding-top: 80px;
+  }
+
   .programs-promo__list {
     display: flex;
     flex-wrap: wrap;
@@ -205,8 +228,10 @@
     width: 570px;
     margin-right: 80px;
     margin-bottom: 0;
-    padding-right: 55px;
-    padding-left: 50px;
+    padding-top: 76px;
+    padding-right: 16px;
+    padding-bottom: 63px;
+    padding-left: 52px;
   }
 
   .programs-promo__item:last-child {
@@ -214,12 +239,12 @@
   }
 
   .programs-promo__title {
-    margin-bottom: 75px;
-    padding-left: 165px;
+    margin-bottom: 74px;
+    padding-left: 161px;
 
     &::before {
-      top: -30px;
-      left: -5px;
+      top: -29px;
+      left: 0;
 
       width: 100px;
       height: 100px;
@@ -228,8 +253,8 @@
 
   .programs-promo__title--weight-loss {
     &::after {
-      top: -38px;
-      left: 4px;
+      top: -35px;
+      left: 14px;
 
       width: 71px;
       height: 97px;
@@ -242,7 +267,7 @@
   .programs-promo__title--weight-gain {
     &::after {
       top: -7px;
-      left: -21px;
+      left: -18px;
 
       width: 134px;
       height: 57px;
@@ -253,7 +278,7 @@
   }
 
   .programs-promo__description {
-    margin-bottom: 35px;
+    margin-bottom: 31px;
     padding-bottom: 0;
   }
 }
