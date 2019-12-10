@@ -101,6 +101,10 @@
 // // ======================================================================
 
 @media (min-width: $desktop-width) {
+  .main-nav {
+    z-index: 3;
+  }
+
   .main-nav__wrapper {
     width: 480px;
   }
