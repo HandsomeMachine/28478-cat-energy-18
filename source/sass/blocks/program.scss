@@ -1,19 +1,11 @@
 .program {
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 
 .program__group {
   margin: 0;
   padding: 0;
   border: none;
-}
-
-.program__title {
-  display: flex;
-  align-items: center;
-
-  margin: 0;
-  margin-bottom: 30px;
 }
 
 .program__list {
@@ -24,24 +16,32 @@
   display: flex;
   align-items: center;
 
-  margin-bottom: 25px;
+  margin-bottom: 14px;
 }
 
-.program__base-info .program__item {
-  margin-bottom: 15px;
+.program__goal .program__item,
+.program__add-goods__item {
+  margin-bottom: 25px;
 }
 
 .program__item:last-child {
   margin-bottom: 0;
 }
 
+.program__base-info-wrapper {
+  margin-bottom: 29px;
+}
+
 .program__cat-info {
-  padding-bottom: 20px;
+  width: $mobile-width;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
 }
 
 .program__goal {
-  margin-bottom: 30px;
-  padding: 20px 0;
+  padding: 26px 20px;
 
   border-top: 1px solid $line-gray;
   border-bottom: 1px solid $line-gray;
@@ -57,11 +57,11 @@
 .program__input-text {
   flex-grow: 1;
 
-  margin-left: 15px;
-  padding-top: 10px;
+  margin-left: 14px;
+  padding-top: 12px;
   padding-right: 5px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding-bottom: 13px;
+  padding-left: 15px;
 
   font-size: 16px;
   line-height: 18px;
@@ -97,7 +97,7 @@ input[type="checkbox"]:focus + .program__label--focus {
     content: "";
 
     position: absolute;
-    top: -4px;
+    top: -6px;
     left: 0;
 
     width: 30px;
@@ -123,7 +123,7 @@ input[type="radio"]:checked + .program__label--radio {
     content: "";
 
     position: absolute;
-    top: 5px;
+    top: 4px;
     left: 9px;
 
     width: 12px;
@@ -135,14 +135,25 @@ input[type="radio"]:checked + .program__label--radio {
 }
 
 .program__contacts {
+  width: $mobile-width;
   margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.program__title {
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.program__title--add-goods {
+  margin-bottom: 39px;
 }
 
 .program__input-icon--mail {
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
   background-size: 18px 14px;
-  background-position: 180px 11px;
+  background-position: 182px 14px;
 
   &:active {
     background-image: url("../img/icon-mail-active.svg");
@@ -153,7 +164,7 @@ input[type="radio"]:checked + .program__label--radio {
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-size: 21px 21px;
-  background-position: 165px 8px;
+  background-position: 165px 12px;
 
   &:active {
     background-image: url("../img/icon-phone-active.svg");
@@ -161,12 +172,15 @@ input[type="radio"]:checked + .program__label--radio {
 }
 
 .program__comment {
+  width: $mobile-width;
   margin-bottom: 30px;
+  padding: 0 20px;
 }
 
 .program__comment-textarea {
   width: 100%;
-  padding: 15px 5px;
+  height: 150px;
+  padding: 13px 5px;
 
   font-size: 16px;
   line-height: 18px;
@@ -189,7 +203,9 @@ input[type="radio"]:checked + .program__label--radio {
 }
 
 .program__add-goods {
-  margin-bottom: 30px;
+  width: $mobile-width;
+  margin-bottom: 37px;
+  padding: 0 20px;
 }
 
 .program__label--checkbox {
@@ -239,8 +255,16 @@ input[type="checkbox"]:checked + .program__label--checkbox {
 
 .program__button {
   width: 280px;
-  padding: 13px 10px;
   margin-bottom: 20px;
+  padding-top: 13px;
+  padding-right: 10px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+}
+
+.program__add-goods__wrapper {
+  width: $mobile-width;
+  padding: 0 20px;
 }
 
 .program__important-field {
@@ -248,6 +272,7 @@ input[type="checkbox"]:checked + .program__label--checkbox {
 
   margin: 0 auto;
 
+  font-family: $second-font;
   font-size: 14px;
   line-height: 16px;
   color: $second-font-color;
@@ -255,13 +280,17 @@ input[type="checkbox"]:checked + .program__label--checkbox {
   text-transform: none;
 }
 
+.program__important-field sup {
+  top: -0.2em;
+}
+
 // // ======================================================================
 //    ##Tablet styles
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
-  .program__title {
-    margin-bottom: 70px;
+  .program {
+    padding-bottom: 73px;
   }
 
   .program__item {
@@ -277,13 +306,29 @@ input[type="checkbox"]:checked + .program__label--checkbox {
   }
 
   .program__cat-info {
-    margin-bottom: 70px;
+    width: $tablet-width;
+    margin-bottom: 73px;
+    padding-right: 67px;
     padding-bottom: 0;
+    padding-left: 72px;
   }
 
   .program__goal {
-    margin-bottom: 80px;
-    padding: 27px 24px;
+    margin-bottom: 73px;
+    padding-top: 0;
+    padding-right: 67px;
+    padding-bottom: 0;
+    padding-left: 71px;
+
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .program__goal .program__list {
+    padding-top: 33px;
+    padding-right: 24px;
+    padding-bottom: 33px;
+    padding-left: 24px;
 
     border: 1px solid $line-gray;
   }
@@ -294,37 +339,84 @@ input[type="checkbox"]:checked + .program__label--checkbox {
   }
 
   .program__input-text {
-    padding-top: 16px;
+    margin-left: 17px;
+    padding-top: 15px;
     padding-right: 5px;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-left: 19px;
 
     font-size: 20px;
     line-height: 20px;
   }
 
+  .program__label--radio {
+    position: relative;
+
+    padding-left: 63px;
+
+    &::before {
+      top: -10px;
+      left: 4px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  input[type="radio"]:checked + .program__label--radio {
+    &::after {
+      top: 2px;
+      left: 16px;
+
+      width: 17px;
+      height: 17px;
+    }
+  }
+
   .program__contacts {
-    margin-bottom: 70px;
+    width: $tablet-width;
+    margin-bottom: 66px;
+    padding-right: 65px;
+    padding-left: 70px;
+  }
+
+  .program__title {
+    margin-bottom: 77px;
+  }
+
+  .program__title--add-goods {
+    margin-bottom: 66px;
   }
 
   .program__input-icon--mail {
-    background-position: 511px 11px;
+    background-position: 514px 18px;
   }
 
   .program__input-icon--phone {
-    background-position: 490px 8px;
+    background-position: 493px 16px;
   }
 
   .program__comment {
-    margin-bottom: 70px;
+    width: $tablet-width;
+    margin-bottom: 64px;
+    padding-right: 67px;
+    padding-left: 70px;
   }
 
   .program__comment-textarea {
-    padding: 15px 20px;
+    height: 173px;
+    padding: 8px 19px;
 
     font-size: 20px;
     line-height: 30px;
     text-align: left;
+  }
+
+  .program__add-goods {
+    width: $tablet-width;
+    margin-bottom: 62px;
+    padding-right: 67px;
+    padding-left: 70px;
   }
 
   .program__add-goods__list {
@@ -335,25 +427,49 @@ input[type="checkbox"]:checked + .program__label--checkbox {
 
   .program__add-goods__item {
     width: 285px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   .program__add-goods__item:nth-child(odd) {
     margin-right: 60px;
   }
 
-  .program__add-goods__item:last-child {
-    margin-bottom: 55px;
+  .program__add-goods__item:nth-last-child(1),
+  .program__add-goods__item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .program__label--checkbox {
+    padding-left: 58px;
+
+    &::before {
+      top: -10px;
+
+      width: 39px;
+      height: 39px;
+    }
+  }
+
+  input[type="checkbox"]:checked + .program__label--checkbox {
+    &::after {
+      left: 9px;
+    }
   }
 
   .program__add-goods__wrapper {
     display: flex;
     align-items: center;
+
+    width: $tablet-width;
+    padding-right: 67px;
+    padding-left: 70px;
   }
 
   .program__button {
-    margin-right: 60px;
+    margin-right: 66px;
     margin-bottom: 0;
+    padding-top: 17px;
+    padding-bottom: 15px;
   }
 
   .program__important-field {
@@ -368,18 +484,38 @@ input[type="checkbox"]:checked + .program__label--checkbox {
 // // ======================================================================
 
 @media (min-width: $desktop-width) {
+  .program {
+    padding-bottom: 85px;
+  }
+
   .program__base-info-wrapper {
     display: flex;
-    align-items: center;
 
+    width: $desktop-width;
     margin-bottom: 70px;
+    padding-top: 0;
+    padding-right: 110px;
+    padding-bottom: 0;
+    padding-left: 112px;
   }
 
   .program__input-text {
-    padding-top: 16px;
+    padding-top: 14px;
     padding-right: 19px;
-    padding-bottom: 17px;
+    padding-bottom: 14px;
     padding-left: 19px;
+  }
+
+  .program__item {
+    margin-bottom: 23px;
+  }
+
+  .program__goal .program__item {
+    margin-bottom: 32px;
+  }
+
+  .program__goal .program__item:last-child {
+    margin-bottom: 0;
   }
 
   .program__cat-info,
@@ -390,10 +526,18 @@ input[type="checkbox"]:checked + .program__label--checkbox {
 
   .program__cat-info {
     margin-right: 80px;
+    padding: 0;
   }
 
   .program__goal {
-    padding: 35px 27px;
+    padding: 0;
+  }
+
+  .program__contacts {
+    width: $desktop-width;
+    margin-bottom: 69px;
+    padding-right: 110px;
+    padding-left: 112px;
   }
 
   .program__contacts-list {
@@ -407,21 +551,35 @@ input[type="checkbox"]:checked + .program__label--checkbox {
   }
 
   .program__item--mail {
-    margin-right: 80px;
+    margin-right: 77px;
   }
 
   .program__input-icon--mail {
-    background-position: 450px 20px;
+    background-position: 452px 18px;
   }
 
   .program__input-icon--phone {
-    background-position: 430px 17px;
+    background-position: 430px 15px;
+  }
+
+  .program__comment {
+    width: $desktop-width;
+    margin-bottom: 66px;
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
+  .program__add-goods {
+    width: $desktop-width;
+    margin-bottom: 70px;
+    padding-right: 110px;
+    padding-left: 110px;
   }
 
   .program__add-goods__item {
     width: 245px;
     margin-right: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 
   .program__add-goods__item:nth-child(odd) {
@@ -430,11 +588,21 @@ input[type="checkbox"]:checked + .program__label--checkbox {
 
   .program__add-goods__item:last-child {
     margin-right: 0;
-    margin-bottom: 60px;
+  }
+
+  .program__add-goods__item:nth-last-child(1),
+  .program__add-goods__item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .program__add-goods__wrapper {
+    width: $desktop-width;
+    padding-right: 110px;
+    padding-left: 111px;
   }
 
   .program__button {
-    width: 570px;
-    margin-right: 80px;
+    width: 568px;
+    margin-right: 83px;
   }
 }
