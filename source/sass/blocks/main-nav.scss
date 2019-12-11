@@ -39,9 +39,9 @@
 
     position: absolute;
     bottom: -5px;
-    left: 2px;
+    left: 0;
 
-    width: 91%;
+    width: 97%;
     height: 2px;
   }
 }
@@ -53,23 +53,15 @@
 }
 
 // // ======================================================================
-//    ##Mobile styles
-// // ======================================================================
-
-// @media (min-width: $mobile-width) {
-//   .main-nav {
-//   display: none;
-//   }
-// }
-
-// // ======================================================================
 //    ##Tablet styles
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
   .main-nav {
     display: block;
+  }
 
+  .main-nav__wrapper {
     width: 440px;
   }
 
@@ -110,6 +102,10 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    z-index: 3;
+  }
+
+  .main-nav__wrapper {
     width: 480px;
   }
 

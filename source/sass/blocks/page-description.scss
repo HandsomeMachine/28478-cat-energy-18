@@ -1,21 +1,31 @@
 .page-description__slogan {
-  margin: 0;
-  padding: 0;
-
   font-weight: 400;
   text-transform: uppercase;
 }
 
-// // ======================================================================
-//    ##Mobile styles
-// // ======================================================================
+.page-description__slogan--index {
+  margin-bottom: 300px;
+}
 
-@media (min-width: $mobile-width) {
-  .page-description__slogan--size-xs {
-    line-height: 14px;
-    color: $font-color-white;
-    text-align: center;
-  }
+.page-description__slogan--form {
+  width: $mobile-width;
+
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+
+.page-description__slogan--size-xs {
+  line-height: 14px;
+  color: $font-color-white;
+  text-align: center;
+}
+
+.page-description__image {
+  position: absolute;
+  top: 140px;
+  left: 0;
 }
 
 // // ======================================================================
@@ -24,10 +34,8 @@
 
 @media (min-width: $tablet-width) {
   .page-description {
-    display: flex;
-    flex-direction: column;
-
-    width: 425px;
+    width: $tablet-width;
+    padding-left: 40px;
   }
 
   .page-description__slogan--size-m {
@@ -37,8 +45,60 @@
     text-align: left;
   }
 
+  .page-description__slogan--index {
+    margin-bottom: 47px;
+  }
+
+  .page-description__slogan--form {
+    width: 395px;
+
+    margin: 0;
+    margin-bottom: 66px;
+    padding-right: 0;
+    padding-left: 70px;
+  }
+
   .page-description__slogan--size-l {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .page-description__image {
+    position: relative;
+
+    width: 708px;
+    height: 609px;
+    margin-top: -220px;
+    margin-left: -87px;
+  }
+}
+
+// // ======================================================================
+//    ##Desktop styles
+// // ======================================================================
+
+@media (min-width: $desktop-width) {
+  .page-description {
+    width: $desktop-width;
+    padding-left: 0;
+  }
+
+  .page-description__slogan--index {
+    margin-bottom: 51px;
+  }
+
+  .page-description__slogan--form {
+    width: 435px;
+
+    padding-left: 110px;
+  }
+
+  .page-description__image {
+    position: relative;
+
+    width: 552px;
+    height: 499px;
+    margin-top: -505px;
+    margin-left: 370px;
   }
 }

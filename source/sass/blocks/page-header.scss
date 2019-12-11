@@ -65,10 +65,6 @@
   margin-bottom: 25px;
 }
 
-.page-header__description-slogan {
-  margin-bottom: 300px;
-}
-
 .page-header__button {
   width: 280px;
   margin-bottom: 21px;
@@ -76,12 +72,6 @@
   padding-right: 10px;
   padding-bottom: 11px;
   padding-left: 10px;
-}
-
-.page-header__description-image {
-  position: absolute;
-  top: 140px;
-  left: 0;
 }
 
 // // ======================================================================
@@ -144,14 +134,6 @@
     margin-bottom: 41px;
   }
 
-  .page-header__description {
-    width: $tablet-width;
-  }
-
-  .page-header__description-slogan {
-    margin-bottom: 47px;
-  }
-
   .page-header__button {
     position: relative;
     z-index: 1;
@@ -162,15 +144,6 @@
     padding-right: 10px;
     padding-bottom: 15px;
     padding-left: 10px;
-  }
-
-  .page-header__description-image {
-    position: relative;
-
-    width: 708px;
-    height: 609px;
-    margin-top: -220px;
-    margin-left: -87px;
   }
 }
 
@@ -235,22 +208,5 @@
 
   .page-header__title {
     width: 410px;
-  }
-
-  .page-header__description {
-    width: $desktop-width;
-  }
-
-  .page-header__description-slogan {
-    margin-bottom: 51px;
-  }
-
-  .page-header__description-image {
-    position: relative;
-
-    width: 552px;
-    height: 499px;
-    margin-top: -505px;
-    margin-left: 370px;
   }
 }
