@@ -39,7 +39,7 @@
   width: 100%;
   padding-top: 28px;
 
-  background: linear-gradient(to bottom, #65a93c 306px, $bg-color-white 174px);
+  background: linear-gradient(to bottom, $green-dark 306px, $bg-color-white 174px);
 
   &::after {
     content: "";
@@ -53,6 +53,10 @@
     height: 305px;
 
     background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2.jpg");
+    }
   }
 }
 
@@ -157,7 +161,7 @@
   }
 
   .page-header--green {
-    background: linear-gradient(to right, $bg-color-white 50%, #65a93c 50%);
+    background: linear-gradient(to right, $bg-color-white 50%, $green-dark 50%);
   }
 
   .page-header--bg-image {
@@ -171,11 +175,11 @@
       width: 720px;
       height: 694px;
 
-      background-color: $green;
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: 720px 694px;
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/index-background-desktop@2.jpg");
+        background-image: url("../img/index-background-desktop@2x.jpg");
       }
     }
   }
@@ -199,7 +203,7 @@
     min-height: 573px;
     padding-top: 99px;
 
-    background: linear-gradient(to right, $bg-color-white 50%, #65a93c 50%);
+    background: linear-gradient(to right, $bg-color-white 50%, $green-dark 50%);
   }
 
   .page-header__intro-wrapper {

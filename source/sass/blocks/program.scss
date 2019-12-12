@@ -155,7 +155,7 @@ input[type="radio"]:checked + .program__label--radio {
   background-size: 18px 14px;
   background-position: 182px 14px;
 
-  &:active {
+  &:active svg {
     background-image: url("../img/icon-mail-active.svg");
   }
 }
