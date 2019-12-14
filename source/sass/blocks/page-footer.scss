@@ -11,22 +11,24 @@
   display: flex;
   justify-content: space-between;
 
-  padding-top: 29px;
+  padding-top: 28px;
   padding-bottom: 25px;
 }
 
 .page-footer__contacts-cooperation {
+  width: 160px;
   margin: 0;
+  margin-right: 15px;
 }
 
-.page-footer__contacts-intro {
+.page-footer__contacts-cooperation-text {
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
 }
 
 .page-footer__contacts-address {
-  width: 190px;
+  width: 180px;
   margin: 0;
 
   font-family: $second-font;
@@ -45,7 +47,7 @@
   justify-content: center;
 
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 31px;
 }
 
 .page-footer__social {
@@ -67,7 +69,7 @@
 }
 
 .page-footer__social-item {
-  margin-right: 35px;
+  margin-right: 36px;
 }
 
 .page-footer__social-item:last-child {
@@ -108,14 +110,6 @@
   padding-bottom: 22px;
 }
 
-.page-footer__copyright-text {
-  font-family: $second-font;
-  font-size: 16px;
-  line-height: 16px;
-  color: $second-font-color;
-  text-transform: none;
-}
-
 .page-footer__copyright-link {
   display: flex;
   justify-content: space-between;
@@ -131,6 +125,15 @@
     opacity: 0.3;
     color: rgba(68, 68, 68, 0.3);
   }
+}
+
+.page-footer__copyright-text {
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: $second-font-color;
+  text-transform: none;
 }
 
 .page-footer__copyright-image {
@@ -153,13 +156,13 @@
     padding-top: 6px;
   }
 
-  .page-footer__contacts-intro {
+  .page-footer__contacts-cooperation-text {
     font-size: 20px;
     line-height: 25px;
   }
 
   .page-footer__contacts-address {
-    margin-right: 40px;
+    margin-right: 42px;
     padding-top: 4px;
 
     font-size: 16px;
@@ -181,13 +184,14 @@
     flex-wrap: wrap;
     align-items: center;
 
-    padding-top: 55px;
+    padding-top: 54px;
     padding-bottom: 60px;
   }
 
   .page-footer__logo {
     margin-right: 156px;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .page-footer__social {
@@ -210,7 +214,7 @@
 
   .page-footer__social-link--instagram svg {
     width: 23px;
-    height: 23px;
+    height: 24px;
   }
 
   .page-footer__social-link--facebook svg {
@@ -222,6 +226,10 @@
     width: 165px;
     margin-left: auto;
     padding: 0;
+  }
+
+  .page-footer__copyright-text {
+    letter-spacing: 0.1px;
   }
 }
 

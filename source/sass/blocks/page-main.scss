@@ -4,9 +4,6 @@
   padding-top: 16px;
   padding-right: 20px;
   padding-left: 20px;
-
-  border-top: 1px solid $line-gray;
-  border-bottom: 1px solid $line-gray;
 }
 
 .page-main__title--catalog {
@@ -14,10 +11,7 @@
 }
 
 .page-main__title--form {
-  margin-bottom: 25px;
-
-  border-top: none;
-  border-bottom: none;
+  margin-bottom: 23px;
 }
 
 // // ======================================================================
@@ -27,20 +21,20 @@
 @media (min-width: $tablet-width) {
   .page-main__title {
     width: $tablet-width;
-    padding-top: 28px;
-    padding-right: 30px;
-    padding-left: 30px;
-
-    border-top: none;
-    border-bottom: none;
   }
 
   .page-main__title--catalog {
-    margin-bottom: 165px;
+    margin-bottom: 136px;
+    padding-top: 28px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .page-main__title--form {
-    margin-bottom: 55px;
+    margin-bottom: 56px;
+    padding-top: 29px;
+    padding-right: 30px;
+    padding-left: 29px;
   }
 }
 

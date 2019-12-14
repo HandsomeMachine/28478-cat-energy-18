@@ -7,21 +7,15 @@
   text-transform: none;
 }
 
-// // ======================================================================
-//    ##Mobile styles
-// // ======================================================================
+.title-h1--size-s {
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
 
-@media (min-width: $mobile-width) {
-  .title-h1--size-s {
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-  }
-
-  .title-h1--size-m {
-    font-size: 36px;
-    line-height: 60px;
-  }
+.title-h1--size-m {
+  font-size: 36px;
+  line-height: 60px;
 }
 
 .title-h1--white {
