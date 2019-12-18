@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  padding-top: 15px;
+  padding-top: 16px;
 
   background-color: $bg-color-gray;
 }
@@ -15,17 +15,21 @@
 
 .example__title {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 .example__description {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding-right: 5px;
 
   font-family: $second-font;
   text-transform: none;
   color: $second-font-color;
+}
+
+.example__table-wrapper {
+  margin-bottom: 34px;
 }
 
 .example__table {
@@ -47,7 +51,10 @@
 
 .example__data {
   width: 124px;
-  padding: 15px 20px;
+  padding-top: 14px;
+  padding-right: 20px;
+  padding-bottom: 17px;
+  padding-left: 20px;
 
   font-size: 24px;
   line-height: 24px;
@@ -61,7 +68,7 @@
   z-index: 1;
 
   width: 87px;
-  margin-top: -14px;
+  margin-top: -15px;
   padding: 5px 15px;
 
   font-family: $second-font;
@@ -76,7 +83,6 @@
 
 .example__budget-spend {
   margin: 0;
-  margin-bottom: 33px;
 
   line-height: 20px;
   text-align: center;
@@ -180,9 +186,15 @@
     line-height: 24px;
   }
 
-  .example__wrapper {
+  .example__table {
+    margin-bottom: 0;
+  }
+
+  .example__table-wrapper {
     display: flex;
     align-items: center;
+
+    margin-bottom: 0;
   }
 
   .example__weight-loss,
@@ -192,7 +204,7 @@
   }
 
   .example__weight-loss {
-    margin-right: 43px;
+    margin-right: 42px;
   }
 
   .example__data {
@@ -227,7 +239,7 @@
     flex-direction: column;
 
     width: 175px;
-    margin-bottom: 26px;
+    margin-bottom: 12px;
     margin-left: auto;
 
     font-size: 20px;
@@ -235,7 +247,7 @@
   }
 
   .example__budget-spend-text {
-    margin-bottom: 6px;
+    margin-bottom: 9px;
   }
 
   .example-slider {
@@ -244,7 +256,7 @@
 
   .example-slider__image {
     position: relative;
-    top: -213px;
+    top: -212px;
     left: 7px;
 
     width: 690px;
@@ -263,6 +275,8 @@
     width: 428px;
     height: 6px;
     margin: 0 17px;
+
+    background-color: $bg-color-gray-darken;
   }
 
   .example-slider__toggle {
@@ -274,14 +288,15 @@
     height: 34px;
 
     background-color: $bg-color-white;
+    border: 1px solid $line-gray-darken;
     border-radius: 50%;
 
     &::before {
       content: "";
 
       position: absolute;
-      top: 13px;
-      left: 13px;
+      top: 12px;
+      left: 12px;
 
       width: 8px;
       height: 8px;
@@ -340,13 +355,13 @@
     margin-bottom: 69px;
   }
 
-  .example__wrapper {
+  .example__table-wrapper {
     flex-direction: column;
   }
 
   .example__table {
     margin-right: auto;
-    margin-bottom: 51px;
+    margin-bottom: 50px;
   }
 
   .example__text {
@@ -380,7 +395,7 @@
   .example-slider__image {
     position: relative;
     top: -55px;
-    left: 37px;
+    left: 36px;
 
     margin-bottom: 0;
   }

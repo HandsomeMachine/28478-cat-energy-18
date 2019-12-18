@@ -3,13 +3,20 @@
   flex-direction: column;
 }
 
-.page-header__wrapper {
+.page-header__container {
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.page-header__logo-wrapper {
   display: flex;
   align-items: center;
 
-  width: 280px;
+  width: $mobile-width;
   margin: 0 auto;
-  padding: 13px 0;
+  padding: 13px 20px;
+
+  border-bottom: 1px solid $line-gray;
 }
 
 .page-header__toggle {
@@ -18,11 +25,7 @@
   margin-left: auto;
 
   border: none;
-
   background-color: $bg-color-white;
-  background-image: url("../img/icon-mobile-menu.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 
   cursor: pointer;
 }
@@ -33,13 +36,21 @@
   background-position: 50% 50%;
 }
 
+.page-header__toggle--open {
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .page-header__intro {
   position: relative;
+  z-index: 1;
 
   width: 100%;
-  padding-top: 28px;
+  margin-bottom: 23px;
+  padding-top: 27px;
 
-  background: linear-gradient(to bottom, #65a93c 306px, $bg-color-white 174px);
+  background: linear-gradient(to bottom, $green-dark 306px, $bg-color-white 174px);
 
   &::after {
     content: "";
@@ -47,12 +58,15 @@
     position: absolute;
     top: 0;
     left: calc(50% - 160px);
-    z-index: 1;
 
     width: 320px;
     height: 305px;
 
     background-image: url("../img/index-background-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2.jpg");
+    }
   }
 }
 
@@ -67,8 +81,7 @@
 
 .page-header__button {
   width: 280px;
-  margin-bottom: 21px;
-  padding-top: 14px;
+  padding-top: 11px;
   padding-right: 10px;
   padding-bottom: 11px;
   padding-left: 10px;
@@ -79,25 +92,28 @@
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
+  .page-header__container {
+    width: $tablet-width;
+    margin: 0 auto;
+  }
+
   .page-header__top-wrapper {
     display: flex;
     align-items: center;
 
-    width: $tablet-width;
-    margin-top: 0;
-    margin-right: auto;
     margin-bottom: 22px;
-    margin-left: auto;
-    padding-top: 19px;
+    padding-top: 18px;
     padding-right: 31px;
     padding-bottom: 0;
-    padding-left: 29px;
+    padding-left: 30px;
   }
 
-  .page-header__wrapper {
+  .page-header__logo-wrapper {
     width: 192px;
     margin: 0;
-    padding: 5px 0;
+    padding: 0;
+
+    border-bottom: none;
   }
 
   .page-header__toggle {
@@ -113,6 +129,8 @@
     flex-direction: column;
 
     min-height: 836px;
+    margin-bottom: 0;
+    padding-top: 28px;
 
     background-color: $bg-color-white;
     background-image: none;
@@ -140,10 +158,7 @@
 
     width: 245px;
     margin: 0;
-    padding-top: 17px;
-    padding-right: 10px;
-    padding-bottom: 15px;
-    padding-left: 10px;
+    padding: 16px 10px;
   }
 }
 
@@ -156,8 +171,8 @@
     position: relative;
   }
 
-  .page-header--green {
-    background: linear-gradient(to right, $bg-color-white 50%, #65a93c 50%);
+  .page-header__container {
+    width: $desktop-width;
   }
 
   .page-header--bg-image {
@@ -167,15 +182,17 @@
       position: absolute;
       top: 0;
       left: 50%;
+      z-index: 1;
 
       width: 720px;
-      height: 694px;
+      height: 695px;
 
-      background-color: $green;
+      background-color: $green-dark;
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: 720px 694px;
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/index-background-desktop@2.jpg");
+        background-image: url("../img/index-background-desktop@2x.jpg");
       }
     }
   }
@@ -187,19 +204,22 @@
     padding-top: 46px;
   }
 
-  .page-header__wrapper {
+  .page-header__logo-wrapper {
     width: 245px;
   }
 
   .page-header__main-nav {
-    z-index: 1;
+    z-index: 10;
   }
 
   .page-header__intro {
+    z-index: 2;
+
     min-height: 573px;
     padding-top: 99px;
 
-    background: linear-gradient(to right, $bg-color-white 50%, #65a93c 50%);
+    border-top: none;
+    background-color: transparent;
   }
 
   .page-header__intro-wrapper {

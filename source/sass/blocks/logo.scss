@@ -9,12 +9,12 @@
   }
 }
 
-.logo__image--header {
+.logo__header-image {
   width: 191px;
   height: 39px;
 }
 
-.logo__image--footer {
+.logo__footer-image {
   width: 128px;
   height: 24px;
 }
@@ -24,7 +24,7 @@
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
-  .logo__image--header {
+  .logo__header-image {
     width: 174px;
     height: 59px;
   }
@@ -35,7 +35,7 @@
 // // ======================================================================
 
 @media (min-width: $desktop-width) {
-  .logo__image--header {
+  .logo__header-image {
     width: 203px;
     height: 60px;
   }

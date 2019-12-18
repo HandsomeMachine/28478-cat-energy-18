@@ -6,10 +6,10 @@
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   padding-top: 30px;
   padding-right: 20px;
-  padding-bottom: 21px;
+  padding-bottom: 22px;
   padding-left: 20px;
 
   background-color: $bg-color-gray;
@@ -23,7 +23,7 @@
   position: relative;
 
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   padding-left: 71px;
 
   &::before {
@@ -49,7 +49,7 @@
 
 .programs-promo__title--weight-loss {
   &::after {
-    top: -8px;
+    top: -9px;
     left: 10px;
 
     width: 35px;
@@ -63,7 +63,7 @@
 .programs-promo__title--weight-gain {
   &::after {
     top: 5px;
-    left: -6px;
+    left: -7px;
 
     width: 67px;
     height: 28px;
@@ -240,7 +240,7 @@
 
   .programs-promo__title {
     margin-bottom: 74px;
-    padding-left: 161px;
+    padding-left: 162px;
 
     &::before {
       top: -29px;

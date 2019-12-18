@@ -3,28 +3,27 @@
   text-transform: uppercase;
 }
 
-.page-description__slogan--index {
-  margin-bottom: 300px;
-}
-
-.page-description__slogan--form {
-  width: $mobile-width;
-
-  margin: 0 auto;
-  margin-bottom: 40px;
-  padding-right: 30px;
-  padding-left: 20px;
-}
-
 .page-description__slogan--size-xs {
   line-height: 14px;
   color: $font-color-white;
   text-align: center;
 }
 
+.page-description__slogan--index {
+  margin-bottom: 302px;
+}
+
+.page-description__slogan--form {
+  width: $mobile-width;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+
 .page-description__image {
   position: absolute;
-  top: 140px;
+  top: 139px;
   left: 0;
 }
 
@@ -33,11 +32,6 @@
 // // ======================================================================
 
 @media (min-width: $tablet-width) {
-  .page-description {
-    width: $tablet-width;
-    padding-left: 40px;
-  }
-
   .page-description__slogan--size-m {
     font-size: 20px;
     line-height: 20px;
@@ -45,22 +39,25 @@
     text-align: left;
   }
 
+  .page-description__slogan--size-l {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .page-description__slogan--index {
-    margin-bottom: 47px;
+    margin-bottom: 48px;
   }
 
   .page-description__slogan--form {
-    width: 395px;
-
-    margin: 0;
+    width: $tablet-width;
     margin-bottom: 66px;
     padding-right: 0;
     padding-left: 70px;
   }
 
-  .page-description__slogan--size-l {
-    font-size: 20px;
-    line-height: 30px;
+  .page-description__container {
+    display: block;
+    width: 385px;
   }
 
   .page-description__image {
@@ -68,8 +65,8 @@
 
     width: 708px;
     height: 609px;
-    margin-top: -220px;
-    margin-left: -87px;
+    margin-top: -218px;
+    margin-left: -88px;
   }
 }
 
@@ -84,13 +81,16 @@
   }
 
   .page-description__slogan--index {
-    margin-bottom: 51px;
+    margin-bottom: 52px;
   }
 
   .page-description__slogan--form {
-    width: 435px;
-
+    width: $desktop-width;
     padding-left: 110px;
+  }
+
+  .page-description__container {
+    width: 380px;
   }
 
   .page-description__image {
@@ -98,7 +98,7 @@
 
     width: 552px;
     height: 499px;
-    margin-top: -505px;
+    margin-top: -504px;
     margin-left: 370px;
   }
 }

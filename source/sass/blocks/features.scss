@@ -1,13 +1,13 @@
 .features {
-  padding-top: 19px;
+  padding-top: 17px;
   padding-right: 0;
-  padding-bottom: 48px;
+  padding-bottom: 46px;
   padding-left: 0;
 }
 
 .features__title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .features__list {
@@ -89,7 +89,7 @@
   }
 
   .features__title {
-    margin-bottom: 75px;
+    margin-bottom: 76px;
   }
 
   .features__list {
@@ -151,7 +151,7 @@
   }
 
   .features__item:nth-child(2n + 1) {
-    margin-right: 140px;
+    margin-right: 139px;
   }
 
   .features__item:nth-last-child(1),
@@ -197,6 +197,10 @@
 
   .features__item:last-child {
     margin-right: 0;
+  }
+
+  .features__title {
+    margin-bottom: 75px;
   }
 
   .features__description {
