@@ -17,10 +17,6 @@
   line-height: 60px;
 }
 
-.title-h2--contacts {
-  width: 210px;
-}
-
 // // ======================================================================
 //    ##Tablet styles
 // // ======================================================================
@@ -34,23 +30,5 @@
   .title-h2--size-l {
     font-size: 60px;
     line-height: 60px;
-  }
-
-  .title-h2--green-line {
-    padding-left: 40px;
-  }
-
-  .title-h2--contacts {
-    width: 550px;
-  }
-}
-
-// // ======================================================================
-//    ##Desktop styles
-// // ======================================================================
-
-@media (min-width: $desktop-width) {
-  .title-h2--green-line {
-    padding-left: 0;
   }
 }

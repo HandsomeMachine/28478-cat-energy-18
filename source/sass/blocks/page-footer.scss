@@ -32,8 +32,9 @@
   margin: 0;
 
   font-family: $second-font;
+  font-style: normal;
   line-height: 20px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: none;
 }
 
@@ -59,17 +60,19 @@
   @include list-base-style-reset;
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   width: 130px;
   margin: 0 auto;
 
   padding-top: 23px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .page-footer__social-item {
   margin-right: 36px;
+  margin-bottom: 10px;
 }
 
 .page-footer__social-item:last-child {
@@ -132,7 +135,7 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: none;
 }
 
@@ -246,7 +249,7 @@
     position: absolute;
     z-index: 1;
     top: 92px;
-    left: 109px;
+    left: 40px;
 
     width: 570px;
     padding-left: 77px;

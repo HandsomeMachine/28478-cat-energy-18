@@ -16,9 +16,9 @@
 
 .catalog__item {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row;
 
   padding-bottom: 24px;
 
@@ -65,7 +65,7 @@
   font-family: $second-font;
   font-size: 12px;
   line-height: 16px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: none;
 }
 
@@ -110,7 +110,7 @@
   font-family: $second-font;
   font-size: 12px;
   line-height: 16px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: none;
 }
 
@@ -127,13 +127,14 @@
   .catalog {
     width: $tablet-width;
     margin: 0 auto;
-    margin-bottom: 68px;
     padding: 0 30px;
   }
 
   .catalog__list {
     flex-direction: row;
     flex-wrap: wrap;
+
+    margin-bottom: 8px;
 
     border-right: none;
     border-left: none;
@@ -143,8 +144,9 @@
     flex-direction: column;
 
     width: 324px;
+    margin-top: 80px;
     margin-right: 60px;
-    margin-bottom: 141px;
+    margin-bottom: 60px;
     padding-right: 0;
     padding-bottom: 40px;
     padding-left: 0;
@@ -155,11 +157,6 @@
 
   .catalog__item:nth-child(even) {
     margin-right: 0;
-  }
-
-  .catalog__item:nth-last-child(1),
-  .catalog__item:nth-last-child(2) {
-    margin-bottom: 0;
   }
 
   .catalog__item:last-child {
@@ -245,7 +242,7 @@
   }
 
   .catalog__item-description {
-    margin-bottom: 89px;
+    margin-bottom: 88px;
     padding: 0 50px;
 
     font-size: 16px;
@@ -265,23 +262,17 @@
 @media (min-width: $desktop-width) {
   .catalog {
     width: $desktop-width;
-    margin-bottom: 76px;
-    padding: 0 110px;
+    padding: 0 40px;
+  }
+
+  .catalog__list {
+    margin-bottom: 11px;
   }
 
   .catalog__item {
-    flex-direction: column;
-
     width: 245px;
     margin-right: 80px;
-    margin-bottom: 143px;
-  }
-
-  .catalog__item:nth-last-child(1),
-  .catalog__item:nth-last-child(2),
-  .catalog__item:nth-last-child(3),
-  .catalog__item:nth-last-child(4) {
-    margin-bottom: 0;
+    margin-bottom: 64px;
   }
 
   .catalog__item:nth-child(even) {
@@ -297,10 +288,11 @@
   }
 
   .catalog__item--plus {
-    padding-top: 164px;
+    padding-top: 162px;
+    padding-bottom: 40px;
 
     &::before {
-      top: 55px;
+      top: 52px;
       left: 92px;
     }
   }

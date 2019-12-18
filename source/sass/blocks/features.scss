@@ -17,7 +17,7 @@
   flex-direction: column;
 
   font-family: $second-font;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: none;
 }
 
@@ -181,22 +181,27 @@
 
 @media (min-width: $desktop-width) {
   .features {
-    padding-top: 72px;
-    // padding-bottom: 103px;
+    padding-top: 52px;
+    padding-bottom: 0;
   }
 
   .features__item {
     width: 245px;
     margin-right: 80px;
-    margin-bottom: 0;
+    margin-bottom: 103px;
   }
 
   .features__item:nth-child(2n + 1) {
     margin-right: 80px;
   }
 
-  .features__item:last-child {
+  .features__item:nth-child(4n) {
     margin-right: 0;
+  }
+
+  .features__item:nth-last-child(1),
+  .features__item:nth-last-child(2) {
+    margin-bottom: 103px;
   }
 
   .features__title {

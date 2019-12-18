@@ -2,11 +2,16 @@
   display: none;
 }
 
+.main-nav--no-js {
+  display: block;
+}
+
 .main-nav__list {
   @include list-base-style-reset;
 
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   text-align: center;
 }
@@ -89,7 +94,7 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
-    color: $default-font-second-color;
+    color: $font-second-color;
   }
 
   .main-nav__link--current {

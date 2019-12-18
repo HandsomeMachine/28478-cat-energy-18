@@ -80,7 +80,7 @@
   padding-bottom: 22px;
 
   font-family: $second-font;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: none;
 
   border-bottom: 1px solid $line-gray-darken;
@@ -227,15 +227,19 @@
   .programs-promo__item {
     width: 570px;
     margin-right: 80px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-top: 76px;
     padding-right: 16px;
     padding-bottom: 63px;
     padding-left: 52px;
   }
 
-  .programs-promo__item:last-child {
+  .programs-promo__item:nth-child(even) {
     margin-right: 0;
+  }
+
+  .programs-promo__item:last-child {
+    margin-bottom: 20px;
   }
 
   .programs-promo__title {
