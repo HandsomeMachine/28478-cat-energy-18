@@ -17,7 +17,7 @@
   margin: 0 auto;
   padding-top: 0;
   padding-right: 20px;
-  padding-bottom: 23px;
+  padding-bottom: 8px;
   padding-left: 20px;
 }
 
@@ -26,7 +26,7 @@
   margin: 0 auto;
   padding-top: 26px;
   padding-right: 20px;
-  padding-bottom: 27px;
+  padding-bottom: 4px;
   padding-left: 20px;
 
   border-top: 1px solid $line-gray;
@@ -36,7 +36,7 @@
 .program__group--contacts {
   width: $mobile-width;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
   padding: 0 20px;
 }
 
@@ -50,12 +50,14 @@
 .program__group--add-goods {
   width: $mobile-width;
   margin: 0 auto;
-  margin-bottom: 41px;
+  margin-bottom: 17px;
   padding: 0 20px;
 }
 
 .program__list {
   @include list-base-style-reset;
+
+  flex-wrap: wrap;
 }
 
 .program__item {
@@ -70,20 +72,54 @@
   margin-bottom: 24px;
 }
 
-.program__item:last-child {
-  margin-bottom: 0;
+.program__item--mail,
+.program__item--phone {
+  position: relative;
+}
+
+.program__item-icon {
+  position: absolute;
+}
+
+.program__item-icon--mail {
+  top: 16px;
+  right: 15px;
+
+  width: 18px;
+  height: 14px;
+
+  fill: $bg-color-svg;
+}
+
+.program__item-icon--phone {
+  top: 13px;
+  right: 12px;
+
+  width: 21px;
+  height: 21px;
+
+  fill: $bg-color-svg;
+}
+
+.program__input-text:focus + .program__item-icon {
+  fill: $green;
+}
+
+.program__input-text:focus:invalid + .program__item-icon,
+.program__input-text:active:invalid + .program__item-icon {
+  fill: $input-error;
 }
 
 .program__label {
+  position: relative;
+
   font-size: 16px;
-  color: $default-font-second-color;
+  color: $font-second-color;
 
   cursor: pointer;
 }
 
 .program__label--goal {
-  position: relative;
-
   padding-left: 45px;
 
   &::before {
@@ -102,7 +138,7 @@
 
   &:hover {
     &::before {
-      border: 1px solid $line-gray-darken2;
+      border: 1px solid $line-gray-darken3;
     }
   }
 
@@ -133,8 +169,6 @@ input[type="checkbox"]:focus + .program__label--add-goods {
 }
 
 .program__label--add-goods {
-  position: relative;
-
   padding-left: 45px;
 
   &::before {
@@ -152,7 +186,7 @@ input[type="checkbox"]:focus + .program__label--add-goods {
 
   &:hover {
     &::before {
-      border: 1px solid $line-gray-darken2;
+      border: 1px solid $line-gray-darken3;
     }
   }
 
@@ -182,54 +216,36 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   margin-left: 14px;
   padding-top: 12px;
-  padding-right: 5px;
+  padding-right: 15px;
   padding-bottom: 13px;
   padding-left: 15px;
 
   font-size: 16px;
   line-height: 18px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-transform: uppercase;
   border: 1px solid $line-gray;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid $line-gray-darken2;
   }
 
+  &:focus,
   &:active {
-    border: 1px solid $second-font-color;
+    border-color: $line-black;
+    box-shadow: inset 0 0 0 2px $line-black;
+  }
+
+  &:focus:invalid,
+  &:active:invalid {
+    border-color: $input-error;
+    box-shadow: inset 0 0 0 2px $input-error;
   }
 }
 
 .program__group--contacts .program__input-text {
   margin-left: 10px;
-}
-
-.program__input-icon--mail {
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-size: 18px 14px;
-  background-position: 182px 14px;
-
-  &:active svg {
-    background-image: url("../img/icon-mail-active.svg");
-  }
-}
-
-.program__input-icon--phone {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-size: 21px 21px;
-  background-position: 165px 12px;
-
-  &:active {
-    background-image: url("../img/icon-phone-active.svg");
-  }
-}
-
-.program__input-text--error {
-  border: 1px solid $input-error;
+  padding-right: 35px;
 }
 
 .program__title-wrapper {
@@ -239,30 +255,53 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 }
 
 .program__title {
-  display: flex;
-  align-items: center;
+  position: relative;
 
-  margin: 0;
+  display: inline-block;
+
+  margin-top: 0;
   margin-bottom: 33px;
+  margin-left: -20px;
+  padding-right: 24px;
+  padding-left: 20px;
 
+  &::before,
   &::after {
     content: "";
 
-    flex-grow: 1;
+    position: absolute;
+    top: 54%;
+    z-index: -1;
 
-    width: 1px;
+    width: 100vw;
     height: 3px;
-    margin-top: 5px;
-    margin-left: 22px;
 
     background-color: $green;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 100%;
   }
 }
 
 .program__title--contacts {
+  width: 234px;
+
+  &::before,
   &::after {
-    margin-top: -17px;
-    margin-left: -8px;
+    top: 27%;
+  }
+
+  &::before {
+    right: 100%;
+  }
+
+  &::after {
+    left: 95%;
   }
 }
 
@@ -277,7 +316,7 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   font-size: 16px;
   line-height: 18px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-align: center;
   text-transform: uppercase;
 
@@ -285,13 +324,13 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   resize: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border: 1px solid $line-gray-darken2;
   }
 
+  &:focus,
   &:active {
-    border: 1px solid $second-font-color;
+    box-shadow: inset 0 0 0 2px $line-black;
   }
 }
 
@@ -318,7 +357,7 @@ input[type="checkbox"]:checked + .program__label--add-goods {
   font-family: $second-font;
   font-size: 14px;
   line-height: 16px;
-  color: $second-font-color;
+  color: $font-third-color;
   text-align: center;
   text-transform: none;
 }
@@ -358,7 +397,7 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   .program__group--contacts {
     width: $tablet-width;
-    margin-bottom: 66px;
+    margin-bottom: 46px;
     padding-right: 65px;
     padding-left: 70px;
   }
@@ -372,7 +411,7 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   .program__group--add-goods {
     width: $tablet-width;
-    margin-bottom: 64px;
+    margin-bottom: 12px;
     padding-right: 67px;
     padding-left: 70px;
   }
@@ -396,11 +435,15 @@ input[type="checkbox"]:checked + .program__label--add-goods {
     margin-bottom: 20px;
   }
 
+  .program__group--cat-info .program__item:last-child {
+    margin-bottom: 0;
+  }
+
   .program__group--goal .program__item {
     margin-bottom: 33px;
   }
 
-  .program__item:last-child {
+  .program__group--goal .program__item:last-child {
     margin-bottom: 0;
   }
 
@@ -413,9 +456,18 @@ input[type="checkbox"]:checked + .program__label--add-goods {
     margin-right: 60px;
   }
 
-  .program__item--add-goods:nth-last-child(1),
-  .program__item--add-goods:nth-last-child(2) {
-    margin-bottom: 0;
+  .program__item--add-goods:last-child {
+    margin-bottom: 52px;
+  }
+
+  .program__item-icon--mail {
+    top: 19px;
+    right: 20px;
+  }
+
+  .program__item-icon--phone {
+    top: 16px;
+    right: 17px;
   }
 
   .program__label {
@@ -439,7 +491,7 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   input[type="radio"]:checked + .program__label--goal {
     &::after {
-      top: 2px;
+      top: 1px;
       left: 15px;
 
       width: 18px;
@@ -479,42 +531,40 @@ input[type="checkbox"]:checked + .program__label--add-goods {
     margin-left: 17px;
   }
 
-  .program__input-icon--mail {
-    background-position: 514px 18px;
-  }
-
-  .program__input-icon--phone {
-    background-position: 493px 16px;
-  }
-
-  .program__title-wrapper {
-    width: $tablet-width;
-    padding-left: 0;
-  }
-
   .program__title {
     margin-bottom: 76px;
+    margin-left: -40px;
+    padding-right: 39px;
+    padding-left: 40px;
+
+    &::before,
+    &::after {
+      top: 60%;
+    }
 
     &::before {
-      content: "";
-
-      width: 30px;
-      height: 3px;
-      margin-top: 10px;
-
-      background-color: $green;
+      right: 100%;
     }
 
     &::after {
-      margin-top: 10px;
-      margin-left: 39px;
+      left: 100%;
     }
   }
 
   .program__title--contacts {
+    width: 600px;
+
+    &::before,
     &::after {
-      margin-top: 9px;
-      margin-left: 32px;
+      top: 59%;
+    }
+
+    &::before {
+      right: 100%;
+    }
+
+    &::after {
+      left: 99%;
     }
   }
 
@@ -565,13 +615,14 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   .program__base-info-wrapper {
     display: flex;
+    align-items: center;
 
     width: $desktop-width;
     margin-bottom: 68px;
     padding-top: 0;
-    padding-right: 110px;
+    padding-right: 40px;
     padding-bottom: 0;
-    padding-left: 112px;
+    padding-left: 42px;
   }
 
   .program__group--cat-info,
@@ -591,23 +642,23 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   .program__group--contacts {
     width: $desktop-width;
-    margin-bottom: 69px;
-    padding-right: 110px;
-    padding-left: 112px;
+    margin-bottom: 54px;
+    padding-right: 40px;
+    padding-left: 42px;
   }
 
   .program__group--comment {
     width: $desktop-width;
     margin-bottom: 67px;
-    padding-right: 110px;
-    padding-left: 110px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .program__group--add-goods {
     width: $desktop-width;
-    margin-bottom: 70px;
-    padding-right: 110px;
-    padding-left: 110px;
+    margin-bottom: 46px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .program__group--goal .program__list {
@@ -624,79 +675,58 @@ input[type="checkbox"]:checked + .program__label--add-goods {
     margin-bottom: 22px;
   }
 
-  .program__group--goal .program__item {
-    margin-bottom: 33px;
+  .program__group--cat-info .program__item:last-child {
+    margin-bottom: 0;
   }
 
-  .program__group--goal .program__item:last-child {
-    margin-bottom: 0;
+  .program__group--goal .program__item {
+    margin-bottom: 33px;
   }
 
   .program__item--mail,
   .program__item--phone {
     width: 570px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
   }
 
-  .program__item--mail {
+  .program__list--contacts .program__item:nth-child(odd) {
     margin-right: 77px;
   }
 
   .program__item--add-goods {
     width: 245px;
     margin-right: 80px;
-    margin-bottom: 0;
+    margin-bottom: 24px;
   }
 
   .program__item--add-goods:nth-child(odd) {
     margin-right: 80px;
   }
 
-  .program__item--add-goods:last-child {
+  .program__item--add-goods:nth-child(4n) {
     margin-right: 0;
   }
 
-  .program__item--add-goods:nth-last-child(1),
-  .program__item--add-goods:nth-last-child(2) {
-    margin-bottom: 0;
+  .program__item--add-goods:last-child {
+    margin-bottom: 24px;
+  }
+
+  input[type="radio"]:checked + .program__label--goal {
+    &::after {
+      left: 15.5px;
+    }
   }
 
   .program__input-text {
     padding: 14px 19px;
   }
 
-  .program__input-icon--mail {
-    background-position: 452px 18px;
-  }
-
-  .program__input-icon--phone {
-    background-position: 430px 15px;
-  }
-
-  .program__title-wrapper {
-    width: $desktop-width;
-  }
-
   .program__title {
     margin-bottom: 77px;
-
-    &::before {
-      width: 70px;
-      margin-top: 12px;
-      margin-right: 40px;
-    }
-
-    &::after {
-      margin-top: 10px;
-      margin-left: 39px;
-    }
   }
 
   .program__title--contacts {
-    &::after {
-      margin-top: 12px;
-      margin-left: 3px;
-    }
+    margin-left: -42px;
   }
 
   .program__title--add-goods {
@@ -705,8 +735,8 @@ input[type="checkbox"]:checked + .program__label--add-goods {
 
   .program__button-wrapper {
     width: $desktop-width;
-    padding-right: 110px;
-    padding-left: 111px;
+    padding-right: 40px;
+    padding-left: 41px;
   }
 
   .program__button {
