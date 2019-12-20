@@ -618,7 +618,9 @@ input[type="checkbox"]:checked + .program__label--add-goods {
     align-items: center;
 
     width: $desktop-width;
+    margin-right: auto;
     margin-bottom: 68px;
+    margin-left: auto;
     padding-top: 0;
     padding-right: 40px;
     padding-bottom: 0;
