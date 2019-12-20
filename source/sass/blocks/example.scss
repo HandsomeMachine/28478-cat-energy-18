@@ -1,13 +1,15 @@
 .example {
-  display: flex;
-  flex-direction: column;
-
   padding-top: 16px;
 
   background-color: $bg-color-gray;
 }
 
 .example__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example__intro {
   width: $mobile-width;
   margin: 0 auto;
   padding: 0 20px;
@@ -104,6 +106,14 @@
   height: 240px;
 }
 
+.example-slider__image--show {
+  display: block;
+}
+
+.example-slider__image--close {
+  display: none;
+}
+
 .example-slider__actions {
   display: flex;
   justify-content: center;
@@ -173,7 +183,7 @@
     margin-bottom: 64px;
   }
 
-  .example__container {
+  .example__intro {
     width: $tablet-width;
     min-height: 620px;
     padding: 0 30px;
@@ -330,13 +340,8 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    flex-direction: row;
-
-    width: $desktop-width;
-    margin: 0 auto;
+    width: 100%;
     padding-top: 24px;
-    padding-right: 40px;
-    padding-left: 40px;
 
     background: linear-gradient(to bottom, $bg-color-white 159px, $bg-color-gray 159px);
 
@@ -344,6 +349,15 @@
   }
 
   .example__container {
+    flex-direction: row;
+
+    width: $desktop-width;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .example__intro {
     display: flex;
     flex-direction: column;
 

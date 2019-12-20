@@ -5,7 +5,12 @@
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin>
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -164,77 +169,81 @@
 
     <section class="example">
       <div class="example__container">
-        <h2 class="example__title title-h2 title-h2--size-m title-h2--size-l">
-          Живой пример
-        </h2>
-        <div class="example__description-wrapper">
-          <p class="example__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-            на Cat Energy Slim. Отличный результат без изнуряющих
-            тренировок! При этом он не менял своих привычек и по-прежнему
-            спит по 16 часов в день.
-          </p>
-
-          <div class="example__table-wrapper">
-            <div class="example__table">
-              <div class="example__weight-loss">
-                <span class="example__data">5 кг</span>
-                <span class="example__text">снижение веса</span>
-              </div>
-              <div class="example__time-spend">
-                <span class="example__data">60 дней</span>
-                <span class="example__text">затрачено времени</span>
-              </div>
-            </div>
-
-            <p class="example__budget-spend">
-              <span class="example__budget-spend-text">Затраты на питание:</span>
-              <span>15 000 руб.</span>
+        <div class="example__intro">
+          <h2 class="example__title title-h2 title-h2--size-m title-h2--size-l">
+            Живой пример
+          </h2>
+          <div class="example__description-wrapper">
+            <p class="example__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих
+              тренировок! При этом он не менял своих привычек и по-прежнему
+              спит по 16 часов в день.
             </p>
+
+            <div class="example__table-wrapper">
+              <div class="example__table">
+                <div class="example__weight-loss">
+                  <span class="example__data">5 кг</span>
+                  <span class="example__text">снижение веса</span>
+                </div>
+                <div class="example__time-spend">
+                  <span class="example__data">60 дней</span>
+                  <span class="example__text">затрачено времени</span>
+                </div>
+              </div>
+
+              <p class="example__budget-spend">
+                <span class="example__budget-spend-text">Затраты на питание:</span>
+                <span>15 000 руб.</span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="example-slider">
-        <ul class="example-slider__list">
-          <li class="example-slider__item">
-            <picture>
-              <source type="image/webp" media="(min-width: 1300px)"
-                srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="example-slider__image example-slider__image--before" src="img/before-mobile@1x.png"
-                srcset="img/before-mobile@2x.png 2x" width="320" height="240"
-                alt="Кот с лишним весом до приёма питания по программе Cat Energy Slim.">
-            </picture>
-          </li>
-          <li class="example-slider__item visually-hidden">
-            <picture>
-              <source type="image/webp" media="(min-width: 1300px)"
-                srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="example-slider__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"
-                width="320" height="240" alt="Похудевший кота после питания по программе Cat Energy Slim.">
-            </picture>
-          </li>
-        </ul>
-        <div class="example-slider__actions">
-          <button class="example-slider__button" type="button">
-            Было
-          </button>
-          <div class="example-slider__bar">
-            <div class="example-slider__toggle" tabindex="0"><span class="visually-hidden">Ползунок для сравнения веса кота до программы питания и после</span></div>
+        <div class="example-slider">
+          <ul class="example-slider__list">
+            <li>
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="example-slider__image example-slider__image--before example-slider__image--show"
+                  src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240"
+                  alt="Кот с лишним весом до приёма питания по программе Cat Energy Slim.">
+              </picture>
+            </li>
+            <li>
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="example-slider__image example-slider__image--after example-slider__image--close"
+                  src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240"
+                  alt="Похудевший кота после питания по программе Cat Energy Slim.">
+              </picture>
+            </li>
+          </ul>
+          <div class="example-slider__actions">
+            <button class="example-slider__button example-slider__button--before" type="button">
+              Было
+            </button>
+            <div class="example-slider__bar">
+              <div class="example-slider__toggle" tabindex="0"><span class="visually-hidden">Ползунок для сравнения веса
+                  кота до программы питания и после</span></div>
+            </div>
+            <button class="example-slider__button example-slider__button--after" type="button">
+              Стало
+            </button>
           </div>
-          <button class="example-slider__button" type="button">
-            Стало
-          </button>
         </div>
       </div>
     </section>
@@ -296,15 +305,15 @@
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--instagram" href="#">
                 <svg role="img" aria-label="Страница в социальной сети Instagram" focusable="false" width="17"
-                  height="17">
+                  height="20">
                   <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--facebook" href="#">
-                <svg role="img" aria-label="Страница в социальной сети Facebook" focusable="false" width="10"
-                  height="19">
+                <svg role="img" aria-label="Страница в социальной сети Facebook" focusable="false" width="13"
+                  height="20">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
@@ -328,6 +337,7 @@
   </footer>
 
   <script src="js/menu-open.js"></script>
+  <script src="js/slider.js"></script>
   <script src="js/picturefill.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcnw4bU46loUkTm8nd6XjDF490x1LD9i0"></script>
   <script src="js/map.js"></script>

@@ -1,4 +1,6 @@
 .logo {
+  position: relative;
+
   &[href]:hover,
   &[href]:focus {
     opacity: 0.8;
@@ -6,6 +8,19 @@
 
   &[href]:active {
     opacity: 0.6;
+  }
+
+  &::before { //чиним баг с :active для svg в IE11
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    display: block;
   }
 }
 
