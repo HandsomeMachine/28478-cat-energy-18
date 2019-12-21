@@ -10,6 +10,7 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
+var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify-es").default;
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -46,6 +47,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 });
 

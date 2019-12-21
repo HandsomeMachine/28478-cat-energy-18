@@ -44,11 +44,26 @@
 }
 
 .page-footer__logo {
+  position: relative;
+
   display: flex;
   justify-content: center;
 
   padding-top: 40px;
   padding-bottom: 31px;
+
+  &::before { //чиним баг с :active для svg в IE11
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    display: block;
+  }
 }
 
 .page-footer__social {
@@ -80,6 +95,8 @@
 }
 
 .page-footer__social-link {
+  position: relative;
+
   display: flex;
 
   &:hover,
@@ -91,6 +108,19 @@
     fill: $green;
     opacity: 0.3;
   }
+
+  &::before { //чиним баг с :active для svg в IE11
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    display: block;
+  }
 }
 
 .page-footer__social-link--vkontakte svg {
@@ -100,12 +130,12 @@
 
 .page-footer__social-link--instagram svg {
   width: 17px;
-  height: 17px;
+  height: 20px;
 }
 
 .page-footer__social-link--facebook svg {
-  width: 10px;
-  height: 19px;
+  width: 13px;
+  height: 20px;
 }
 
 .page-footer__copyright {
@@ -114,6 +144,8 @@
 }
 
 .page-footer__copyright-link {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,6 +159,19 @@
     fill: $green;
     opacity: 0.3;
     color: rgba(68, 68, 68, 0.3);
+  }
+
+  &::before { //чиним баг с :active для svg в IE11
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    display: block;
   }
 }
 
