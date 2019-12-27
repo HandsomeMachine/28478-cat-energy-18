@@ -43,6 +43,11 @@
   min-height: 362px;
 }
 
+.page-footer__contacts-map-image {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .page-footer__logo {
   position: relative;
 
@@ -227,6 +232,11 @@
     min-height: 400px;
   }
 
+  .page-footer__contacts-map-image {
+    width: 768px;
+    min-height: 400px;
+  }
+
   .page-footer__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -312,6 +322,10 @@
     margin-right: 0;
 
     text-align: left;
+  }
+
+  .page-footer__contacts-map-image {
+    width: 1440px;
   }
 
   .page-footer__logo {
